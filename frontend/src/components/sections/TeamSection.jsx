@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const team = [
   {
@@ -7,18 +7,21 @@ const team = [
     role: "Co-founder & AI Engineer",
     bio: "Leading technical development with deep expertise in artificial intelligence, machine learning, and software engineering. Building the core algorithms powering PsyTech's assessment platform.",
     initials: "MR",
+    linkedin: "https://www.linkedin.com/in/meysam-rostami-874b2b212/",
   },
   {
     name: "Alale Mehranifar",
     role: "Co-founder & CEO",
     bio: "The visionary behind PsyTech's core concept. Leading company strategy, operations, and business development with a background in Biomedical Engineering and healthcare innovation.",
     initials: "AM",
+    linkedin: "https://www.linkedin.com/in/alalemehranifar/",
   },
   {
     name: "Morteza Asadi",
     role: "Co-founder & Sales Manager",
     bio: "Driving business development and strategic partnerships with deep expertise in HealthTech sales and market expansion.",
     initials: "MA",
+    linkedin: "https://www.linkedin.com/in/mortezaasadi-nl",
   },
 ];
 
@@ -70,21 +73,16 @@ export default function TeamSection() {
                 {member.bio}
               </p>
 
-              {/* Social links */}
-              <div className="flex justify-center gap-4">
+              {/* LinkedIn only */}
+              <div className="flex justify-center">
                 <a
-                  href="#"
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={`${member.name} LinkedIn`}
-                  className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-700 hover:border-cyan-200 transition-colors"
+                  className="w-11 h-11 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-700 hover:border-cyan-300 hover:bg-cyan-50 transition-all duration-200"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  aria-label={`${member.name} Email`}
-                  className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-700 hover:border-cyan-200 transition-colors"
-                >
-                  <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>

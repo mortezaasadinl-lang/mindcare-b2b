@@ -27,10 +27,11 @@ load_dotenv(ROOT_DIR / '.env')
 # Resend configuration
 resend.api_key = os.environ.get('RESEND_API_KEY')
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
-NOTIFICATION_EMAIL = 'psytech2026@gmail.com'
+NOTIFICATION_EMAIL = os.environ.get('NOTIFICATION_EMAIL', 'info@psy-tech.nl')
 
 # Make.com webhook for Buffer integration
 MAKE_WEBHOOK_URL = os.environ.get('MAKE_WEBHOOK_URL')
+FRONTEND_URL = os.environ.get('FRONTEND_URL', 'https://psy-tech.nl')
 
 # Admin password
 ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'psytech2026')
@@ -168,7 +169,7 @@ async def send_to_make_webhook(post_data: dict):
     payload = {
         "title": post_data.get("title"),
         "excerpt": post_data.get("summary"),
-        "url": f"https://psytech.nl/blog/{post_data.get('slug')}",
+        "url": f"{FRONTEND_URL}/blog/{post_data.get('slug')}",
         "image_url": post_data.get("hero_image"),
         "tags": post_data.get("tags", []),
         "language": post_data.get("language"),

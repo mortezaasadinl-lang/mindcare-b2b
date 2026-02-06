@@ -145,7 +145,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-slate-500">Email us at</p>
-                  <p className="font-semibold text-slate-900">contact@psytech.eu</p>
+                  <p className="font-semibold text-slate-900">psytech2026@gmail.com</p>
                 </div>
               </div>
 
@@ -155,7 +155,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-slate-500">Based in</p>
-                  <p className="font-semibold text-slate-900">Amsterdam, Netherlands</p>
+                  <p className="font-semibold text-slate-900">Rotterdam, Netherlands</p>
                 </div>
               </div>
             </div>

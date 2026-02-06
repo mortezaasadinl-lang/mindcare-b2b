@@ -1,5 +1,5 @@
 import React from "react";
-import { Brain, Linkedin, Twitter, Mail, Shield } from "lucide-react";
+import { Brain, Linkedin, Instagram, Mail, Shield } from "lucide-react";
 
 const footerLinks = {
   product: [
@@ -123,21 +123,25 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/psytech-nl"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="#"
-              aria-label="Twitter"
+              href="https://instagram.com/psytech.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
               className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"
             >
-              <Twitter className="w-5 h-5" />
+              <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="mailto:contact@psytech.eu"
+              href="mailto:psytech2026@gmail.com"
               aria-label="Email"
               className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"
             >

@@ -4,8 +4,8 @@ import { Linkedin, Mail } from "lucide-react";
 const team = [
   {
     name: "Meysam Rostami",
-    role: "Co-founder & Sales Manager",
-    bio: "Driving business development and strategic partnerships with deep expertise in HealthTech sales and market expansion.",
+    role: "Co-founder & Project Manager",
+    bio: "Leading PsyTech's vision and strategy with expertise in project leadership, operational excellence, and healthcare innovation.",
     initials: "MR",
   },
   {
@@ -16,8 +16,8 @@ const team = [
   },
   {
     name: "Morteza Asadi",
-    role: "Co-founder & Project Manager",
-    bio: "Ensuring operational excellence and product delivery with experience in healthcare project management and agile methodologies.",
+    role: "Co-founder & Sales Manager",
+    bio: "Driving business development and strategic partnerships with deep expertise in HealthTech sales and market expansion.",
     initials: "MA",
   },
 ];

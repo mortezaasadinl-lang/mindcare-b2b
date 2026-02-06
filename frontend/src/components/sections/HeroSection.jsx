@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, ShieldCheck, Award, Clock } from "lucide-react";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+  
   const scrollToSection = (id) => {
     const element = document.querySelector(id);
     if (element) {
@@ -33,11 +36,11 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-3 animate-fade-in-up">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur border border-white/10 rounded-full text-sm text-cyan-300">
                 <ShieldCheck className="w-4 h-4" />
-                GDPR Compliant
+                {t('hero.badge1')}
               </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur border border-white/10 rounded-full text-sm text-cyan-300">
                 <Award className="w-4 h-4" />
-                AI-Powered
+                {t('hero.badge2')}
               </span>
             </div>
 
@@ -46,8 +49,8 @@ export default function HeroSection() {
               data-testid="hero-headline"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight font-['Plus_Jakarta_Sans'] animate-fade-in-up animation-delay-100"
             >
-              Transform Mental Health Assessment with{" "}
-              <span className="text-cyan-400">AI Precision</span>
+              {t('hero.title')}{" "}
+              <span className="text-cyan-400">{t('hero.titleHighlight')}</span>
             </h1>
 
             {/* Subheadline */}
@@ -55,9 +58,7 @@ export default function HeroSection() {
               data-testid="hero-subheadline"
               className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl animate-fade-in-up animation-delay-200"
             >
-              PsyTech delivers personalized, bias-reduced, GDPR-compliant psychological
-              insights using advanced AI and adaptive testing for healthcare providers,
-              institutions, and corporations across Europe.
+              {t('hero.subtitle')}
             </p>
 
             {/* CTA Buttons */}
@@ -67,7 +68,7 @@ export default function HeroSection() {
                 onClick={() => scrollToSection("#contact")}
                 className="btn-primary rounded-full bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-6 text-lg font-semibold shadow-lg shadow-cyan-900/30 transition-all hover:scale-105"
               >
-                Request a Demo
+                {t('hero.cta1')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
@@ -77,7 +78,7 @@ export default function HeroSection() {
                 className="rounded-full bg-transparent border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/30 px-8 py-6 text-lg font-semibold transition-all"
               >
                 <Play className="mr-2 w-5 h-5" />
-                Learn How It Works
+                {t('hero.cta2')}
               </Button>
             </div>
 
@@ -85,15 +86,15 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-8 pt-8 border-t border-white/10 animate-fade-in-up animation-delay-400">
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white font-['Plus_Jakarta_Sans']">40%</p>
-                <p className="text-sm text-slate-400 mt-1">Faster Assessments</p>
+                <p className="text-sm text-slate-400 mt-1">{t('hero.stat1')}</p>
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white font-['Plus_Jakarta_Sans']">99.2%</p>
-                <p className="text-sm text-slate-400 mt-1">Accuracy Rate</p>
+                <p className="text-sm text-slate-400 mt-1">{t('hero.stat2')}</p>
               </div>
               <div>
                 <p className="text-3xl md:text-4xl font-bold text-white font-['Plus_Jakarta_Sans']">100%</p>
-                <p className="text-sm text-slate-400 mt-1">GDPR Compliant</p>
+                <p className="text-sm text-slate-400 mt-1">{t('hero.stat3')}</p>
               </div>
             </div>
           </div>
@@ -153,7 +154,7 @@ export default function HeroSection() {
 
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                AI-Powered
+                {t('hero.badge2')}
               </div>
             </div>
           </div>

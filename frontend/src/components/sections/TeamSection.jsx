@@ -66,7 +66,7 @@ export default function TeamSection() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover object-top"
+                  className={`w-full h-full object-cover ${member.imagePosition || 'object-top'}`}
                 />
               </div>
 

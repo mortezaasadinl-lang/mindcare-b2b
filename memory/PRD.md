@@ -1,7 +1,7 @@
 # PsyTech - Product Requirements Document
 
 ## Original Problem Statement
-Build a professional, modern, high-trust website for PsyTech - an AI-driven mental health assessment platform that transforms traditional psychological evaluations using advanced AI, adaptive testing, and data analytics. Target: healthcare providers, educational institutions, and corporations in the Netherlands and Europe.
+Build a professional, modern, high-trust website for PsyTech - an AI-driven mental health assessment platform. Extended with Blog/Insights section, AI content generation, Buffer integration, and multilingual support.
 
 ## User Personas
 1. **Psychologists & Mental Health Clinics** - Need efficient assessment tools
@@ -10,70 +10,69 @@ Build a professional, modern, high-trust website for PsyTech - an AI-driven ment
 4. **Researchers** - Health organizations seeking data-driven insights
 5. **Investors** - Strategic partners evaluating the platform
 
-## Core Requirements (Static)
-- Professional, scientific, trustworthy design
-- Clear explanation of AI-powered assessment platform
-- B2B partner attraction (clinics, universities, companies)
-- GDPR-compliant messaging for European market
-- Mobile-responsive design
-- Contact/demo request functionality
-
 ## What's Been Implemented (December 2025)
 
-### Frontend (React + Tailwind + Shadcn UI)
-- **Hero Section**: Dark theme with headline, CTAs, trust badges, animated dashboard preview
-- **Problem Section**: 6 problem cards explaining traditional assessment limitations + stats callout
-- **Solution Section**: AI-powered features with mock interface visualization
-- **How It Works**: 4-step process flow with icons
-- **Benefits Section**: Bento grid layout for 4 audience types (Individuals, Healthcare, Education, Corporate)
-- **USP Section**: Dark theme with 6 unique selling points
-- **Market Focus**: Netherlands/Europe focus with stylized map
-- **Impact Section**: 5 impact areas with statistics
-- **Team Section**: 3 founders with placeholder avatars and bios
-- **FAQ Section**: 8 accordion items using shadcn Accordion
-- **Contact Section**: Detailed form with company type dropdown (10 options)
-- **Footer**: Navigation links, GDPR badge, social links
+### Phase 1: Landing Page (Complete)
+- 11-section responsive landing page with dark hero + light content
+- Contact form with company type dropdown + email notifications (Resend)
+- FAQ accordion section, Team section with founders
+- GDPR compliance badges and European market focus
 
-### Backend (FastAPI + MongoDB)
-- `/api/health` - Health check endpoint
-- `/api/contact` - Contact form submission (POST)
-- `/api/contact` - Get submissions (GET)
-- Full CRUD for contact form data with proper validation
+### Phase 2: Blog/Insights System (Complete)
+- **Blog List Page** (/blog): Search, tag filters, pagination
+- **Single Post Page** (/blog/[slug]): Markdown rendering, share buttons, CTA
+- **Admin Dashboard** (/admin): Password-protected (psytech2026)
+  - Create/Edit/Delete posts
+  - Publish/Unpublish with Make.com webhook trigger
+  - AI post generation button
+- **API Endpoints**:
+  - GET /api/posts?lang=&tag=&q=&page=
+  - GET /api/posts/{slug}
+  - POST /api/admin/posts
+  - PUT /api/admin/posts/{id}
+  - POST /api/admin/posts/{id}/publish
+  - POST /api/admin/posts/{id}/unpublish
+  - POST /api/admin/posts/generate-ai
 
-### Design System
-- Typography: Plus Jakarta Sans (headings) + DM Sans (body)
-- Colors: Teal/Cyan palette (#0E7490 primary, #38BDF8 accent)
-- Theme: Mixed (dark hero, light content sections)
-- Noise overlay for premium feel
-- Micro-animations on hover states
+### Phase 3: AI Content Generation (Complete)
+- GPT-4o for content generation via Emergent LLM key
+- GPT Image 1 for hero images via Emergent LLM key
+- Auto-generates title, summary, content (markdown), tags, SEO meta
+- Saves as draft by default (AUTO_PUBLISH_AI_POSTS=false)
+
+### Phase 4: Buffer/Make.com Integration (Complete)
+- Webhook URL: https://hook.eu1.make.com/z2y7tukv6582e6pld04zi1f5nd4d09t3
+- Payload: { title, excerpt, url, image_url, tags, language, published_at }
+- Triggered automatically on publish
+- Retry logic with exponential backoff
+
+### Phase 5: Multilingual Support (Complete)
+- 7 languages: English, Dutch, German, French, Persian, Arabic, Turkish
+- Language selector in navbar (persisted in localStorage)
+- RTL support for Persian (fa) and Arabic (ar)
+- Browser language detection with English fallback
+- All UI translations in /frontend/src/locales/*.json
+
+## Environment Variables
+```
+MONGO_URL="mongodb://localhost:27017"
+DB_NAME="test_database"
+CORS_ORIGINS="*"
+RESEND_API_KEY=re_***
+EMERGENT_LLM_KEY=sk-emergent-***
+MAKE_WEBHOOK_URL=https://hook.eu1.make.com/***
+AUTO_PUBLISH_AI_POSTS=false
+ADMIN_PASSWORD=psytech2026
+```
 
 ## Test Results
-- Backend: 100% (18/18 tests passed)
-- Frontend: 100% (all sections functional)
-- Integration: 100% (contact form to backend working)
-- Mobile: 100% (responsive navigation and forms)
+- Backend: 94% (32/34 tests)
+- Frontend: 100%
+- Integration: 100%
+- Multilingual: 100%
 
-## Prioritized Backlog
-
-### P0 (Critical - Not Yet Implemented)
-- None - MVP complete
-
-### P1 (High Priority - Phase 2)
-- Email notification for contact form submissions
-- CMS integration for team member updates
-- Multi-language support (Dutch, German, French)
-- Assessment demo/preview functionality
-
-### P2 (Nice to Have - Phase 3)
-- Blog/resources section
-- Client testimonials/case studies
-- Partner logo showcase
-- Analytics dashboard for form submissions
-- A/B testing for CTAs
-
-## Next Tasks
-1. Connect contact form to email notification service (e.g., SendGrid)
-2. Add real team member photos when available
-3. Implement analytics tracking (Google Analytics/Mixpanel)
-4. Create landing page variants for different audience segments
-5. Add client testimonials section when available
+## Next Tasks (P1)
+1. Add scheduled cron job for automatic AI post generation (2/week)
+2. Translate all remaining section content (Problem, Solution, etc.)
+3. Add image upload to Admin for hero images
+4. Create more language translations for blog posts

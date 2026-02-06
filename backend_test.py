@@ -180,6 +180,202 @@ class PsyTechAPITester:
                 data=contact_data
             )
 
+    def test_blog_public_endpoints(self):
+        """Test public blog endpoints"""
+        print("\n=== Testing Blog Public Endpoints ===")
+        
+        # Test get all published posts
+        success, response = self.run_test(
+            "Get Published Posts",
+            "GET",
+            "api/posts",
+            200
+        )
+        
+        # Test get posts with language filter
+        self.run_test(
+            "Get Posts (English)",
+            "GET",
+            "api/posts?lang=en",
+            200
+        )
+        
+        # Test get posts with pagination
+        self.run_test(
+            "Get Posts (Paginated)",
+            "GET",
+            "api/posts?page=1&per_page=5",
+            200
+        )
+        
+        # Test get posts with search
+        self.run_test(
+            "Get Posts (Search)",
+            "GET",
+            "api/posts?q=AI",
+            200
+        )
+        
+        # Test get all tags
+        self.run_test(
+            "Get All Tags",
+            "GET",
+            "api/posts/tags/all",
+            200
+        )
+        
+        # Test get posts with tag filter
+        self.run_test(
+            "Get Posts (Tag Filter)",
+            "GET",
+            "api/posts?tag=AI",
+            200
+        )
+        
+        # Test get single post by slug (this might fail if no posts exist)
+        if success and response.get('posts') and len(response['posts']) > 0:
+            first_post = response['posts'][0]
+            slug = first_post.get('slug')
+            if slug:
+                self.run_test(
+                    f"Get Post by Slug ({slug})",
+                    "GET",
+                    f"api/posts/{slug}",
+                    200
+                )
+        else:
+            print("⚠️  No published posts found, skipping single post test")
+
+    def setup_admin_auth(self):
+        """Setup admin authentication"""
+        print("\n=== Setting up Admin Authentication ===")
+        
+        # Create basic auth header
+        credentials = base64.b64encode(b"admin:psytech2026").decode('utf-8')
+        self.admin_auth = {'Authorization': f'Basic {credentials}', 'Content-Type': 'application/json'}
+        print("✅ Admin authentication configured")
+
+    def test_admin_endpoints(self):
+        """Test admin blog endpoints"""
+        print("\n=== Testing Admin Blog Endpoints ===")
+        
+        if not self.admin_auth:
+            self.setup_admin_auth()
+        
+        # Test get all posts (including drafts)
+        success, response = self.run_test(
+            "Admin - Get All Posts",
+            "GET",
+            "api/admin/posts",
+            200,
+            headers=self.admin_auth
+        )
+        
+        # Test create new post
+        post_data = {
+            "title": f"Test Blog Post {datetime.now().strftime('%H%M%S')}",
+            "summary": "This is a test blog post created during API testing to verify the blog functionality works correctly.",
+            "content": "# Test Blog Post\n\nThis is the content of our test blog post.\n\n## Key Points\n\n- Testing blog creation\n- Verifying API endpoints\n- Ensuring proper functionality\n\n## Conclusion\n\nThis test post demonstrates that the blog system is working correctly.",
+            "tags": ["Testing", "API", "Blog"],
+            "language": "en",
+            "hero_image": "https://via.placeholder.com/800x400/0E7490/FFFFFF?text=Test+Blog+Post",
+            "seo": {
+                "meta_title": "Test Blog Post - PsyTech",
+                "meta_description": "A test blog post to verify the blog functionality"
+            }
+        }
+        
+        success, response = self.run_test(
+            "Admin - Create Post",
+            "POST",
+            "api/admin/posts",
+            200,
+            data=post_data,
+            headers=self.admin_auth
+        )
+        
+        if success and response.get('id'):
+            self.created_post_id = response['id']
+            print(f"✅ Created post with ID: {self.created_post_id}")
+            
+            # Test update post
+            update_data = {
+                "title": f"Updated Test Blog Post {datetime.now().strftime('%H%M%S')}",
+                "summary": "This is an updated test blog post summary."
+            }
+            
+            self.run_test(
+                "Admin - Update Post",
+                "PUT",
+                f"api/admin/posts/{self.created_post_id}",
+                200,
+                data=update_data,
+                headers=self.admin_auth
+            )
+            
+            # Test publish post
+            success, response = self.run_test(
+                "Admin - Publish Post",
+                "POST",
+                f"api/admin/posts/{self.created_post_id}/publish",
+                200,
+                headers=self.admin_auth
+            )
+            
+            if success:
+                print("✅ Post published successfully - Make.com webhook should be triggered")
+                
+                # Test unpublish post
+                self.run_test(
+                    "Admin - Unpublish Post",
+                    "POST",
+                    f"api/admin/posts/{self.created_post_id}/unpublish",
+                    200,
+                    headers=self.admin_auth
+                )
+            
+            # Test delete post (cleanup)
+            self.run_test(
+                "Admin - Delete Post",
+                "DELETE",
+                f"api/admin/posts/{self.created_post_id}",
+                200,
+                headers=self.admin_auth
+            )
+        
+        # Test AI post generation (this will run in background)
+        self.run_test(
+            "Admin - Generate AI Post",
+            "POST",
+            "api/admin/posts/generate-ai",
+            200,
+            headers=self.admin_auth
+        )
+
+    def test_admin_auth_failure(self):
+        """Test admin authentication failure"""
+        print("\n=== Testing Admin Authentication Failure ===")
+        
+        # Test with wrong password
+        wrong_credentials = base64.b64encode(b"admin:wrongpassword").decode('utf-8')
+        wrong_auth = {'Authorization': f'Basic {wrong_credentials}', 'Content-Type': 'application/json'}
+        
+        self.run_test(
+            "Admin - Wrong Password",
+            "GET",
+            "api/admin/posts",
+            401,
+            headers=wrong_auth
+        )
+        
+        # Test without authentication
+        self.run_test(
+            "Admin - No Auth",
+            "GET",
+            "api/admin/posts",
+            401
+        )
+
 def main():
     print("🚀 Starting PsyTech API Testing...")
     print("=" * 50)

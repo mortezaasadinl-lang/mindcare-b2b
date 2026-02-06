@@ -17,7 +17,7 @@ Build a professional, modern, high-trust website for PsyTech - an AI-driven ment
 - Contact form with company type dropdown + email notifications (Resend - blocked pending domain verification)
 - FAQ accordion section, Team section with founders (real photos + LinkedIn links)
 - GDPR compliance badges and European market focus
-- Europe map with Netherlands highlight
+- Circular map design with Netherlands highlight (updated Feb 2026)
 
 ### Phase 2: Blog/Insights System (Complete)
 - **Blog List Page** (/blog or /insights): Search, tag filters, pagination
@@ -48,12 +48,12 @@ Build a professional, modern, high-trust website for PsyTech - an AI-driven ment
 - Triggered automatically on publish
 - Retry logic with exponential backoff
 
-### Phase 5: Multilingual Support (Complete - Framework)
+### Phase 5: Multilingual Support (Complete - Feb 2026)
 - 7 languages: English, Dutch, German, French, Persian, Arabic, Turkish
-- Language selector in navbar (persisted in localStorage)
+- Language selector in navbar with flags (persisted in localStorage)
 - RTL support for Persian (fa) and Arabic (ar)
 - Browser language detection with English fallback
-- Translation files in /frontend/src/locales/*.json
+- **Full translations** in /frontend/src/locales/*.json for all sections
 
 ### Phase 6: Automated Content Schedule (Complete - Feb 2026)
 - APScheduler cron job running on Monday & Thursday at 10:00 CET (9:00 UTC)
@@ -61,6 +61,11 @@ Build a professional, modern, high-trust website for PsyTech - an AI-driven ment
 - Auto-publishes if AUTO_PUBLISH_AI_POSTS=true
 - Triggers Make.com webhook for social media cross-posting
 - Scheduler status endpoint: GET /api/admin/scheduler/status
+
+### Phase 7: Analytics (Complete - Feb 2026)
+- Plausible Analytics integration (privacy-friendly, GDPR-compliant)
+- Domain: psy-tech.nl
+- Tracks: blog views, language usage, AI post performance
 
 ## Environment Variables
 ```
@@ -82,12 +87,14 @@ ADMIN_PASSWORD=psytech2026
 ## Known Blockers
 - **Resend Email**: Blocked pending user domain verification (psy-tech.nl)
 
-## Next Tasks (P1)
-1. ~~Add scheduled cron job for automatic AI post generation (2/week)~~ ✅ DONE
-2. Translate all remaining section content (Problem, Solution, etc.)
-3. Add image upload to Admin for hero images
-4. Create more language translations for blog posts
+## Completed in This Session
+1. ✅ Cron job for automated AI post generation (2 posts/week)
+2. ✅ Team photos corrected (Alale & Meysam swapped)
+3. ✅ Map section redesigned with circular globe style
+4. ✅ Plausible Analytics integration
+5. ✅ Full translations for all 7 languages (DE, FR, TR, FA, AR updated)
 
 ## Backlog (P2)
 - Add client testimonials or partner logos
 - User to build Make.com workflow for social media posting
+- Verify Resend domain for email notifications

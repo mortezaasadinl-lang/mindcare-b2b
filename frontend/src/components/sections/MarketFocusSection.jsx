@@ -1,134 +1,271 @@
 import React from "react";
 import { Globe2, MapPin, TrendingUp, Users } from "lucide-react";
 
-// SVG Map of the Netherlands
-const NetherlandsMap = () => (
+// SVG Map of Europe with Netherlands highlighted
+const EuropeMap = () => (
   <svg
-    viewBox="0 0 400 500"
+    viewBox="0 0 500 400"
     className="w-full h-full"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Main Netherlands shape */}
-    <path
-      d="M180 50 L220 45 L260 55 L300 70 L340 90 L360 120 L370 160 L365 200 L355 240 L340 270 L320 300 L290 330 L250 355 L210 370 L170 375 L130 365 L100 340 L80 300 L70 250 L75 200 L90 150 L110 110 L140 75 L180 50Z"
-      fill="url(#netherlandsGradient)"
-      stroke="#0E7490"
-      strokeWidth="2"
-      className="drop-shadow-lg"
-    />
-    
-    {/* Friesland region */}
-    <path
-      d="M160 70 L200 65 L240 75 L260 100 L240 120 L200 115 L165 105 L160 70Z"
-      fill="#0891B2"
-      fillOpacity="0.3"
-      stroke="#0E7490"
-      strokeWidth="1"
-    />
-    
-    {/* Noord-Holland */}
-    <path
-      d="M140 110 L180 105 L200 120 L190 160 L160 180 L130 170 L120 140 L140 110Z"
-      fill="#0891B2"
-      fillOpacity="0.4"
-      stroke="#0E7490"
-      strokeWidth="1"
-    />
-    
-    {/* Zuid-Holland (Randstad highlight) */}
-    <path
-      d="M120 180 L160 175 L190 190 L200 230 L180 260 L140 270 L110 250 L100 210 L120 180Z"
-      fill="#0E7490"
-      fillOpacity="0.5"
-      stroke="#0E7490"
-      strokeWidth="1.5"
-      className="animate-pulse"
-      style={{ animationDuration: '3s' }}
-    />
-    
-    {/* Definitions */}
     <defs>
-      <linearGradient id="netherlandsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#E0F2FE" />
-        <stop offset="50%" stopColor="#BAE6FD" />
-        <stop offset="100%" stopColor="#7DD3FC" />
+      <linearGradient id="europeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#F1F5F9" />
+        <stop offset="100%" stopColor="#E2E8F0" />
       </linearGradient>
-      
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <filter id="netherlandsGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feFlood floodColor="#0E7490" floodOpacity="0.6"/>
+        <feComposite in2="blur" operator="in"/>
         <feMerge>
-          <feMergeNode in="coloredBlur"/>
+          <feMergeNode/>
           <feMergeNode in="SourceGraphic"/>
         </feMerge>
       </filter>
+      
+      {/* Pulse animation keyframes */}
+      <style>
+        {`
+          @keyframes netherlandsPulse {
+            0%, 100% { opacity: 1; filter: url(#netherlandsGlow); }
+            50% { opacity: 0.7; }
+          }
+          .netherlands-pulse {
+            animation: netherlandsPulse 2s ease-in-out infinite;
+          }
+        `}
+      </style>
     </defs>
     
-    {/* City markers */}
-    {/* Amsterdam */}
-    <g className="cursor-pointer" filter="url(#glow)">
-      <circle cx="170" cy="145" r="8" fill="#0E7490" className="animate-pulse" />
-      <circle cx="170" cy="145" r="4" fill="white" />
-      <text x="180" y="142" fill="#0F172A" fontSize="11" fontWeight="600" fontFamily="Plus Jakarta Sans, sans-serif">Amsterdam</text>
-    </g>
+    {/* Iceland */}
+    <path
+      d="M80 45 L95 40 L110 45 L115 55 L105 65 L90 65 L80 55 L80 45Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.4"
+    />
     
-    {/* Rotterdam */}
-    <g className="cursor-pointer" filter="url(#glow)">
-      <circle cx="145" cy="235" r="10" fill="#0891B2" stroke="#0E7490" strokeWidth="3" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
-      <circle cx="145" cy="235" r="4" fill="white" />
-      <text x="160" y="238" fill="#0F172A" fontSize="12" fontWeight="700" fontFamily="Plus Jakarta Sans, sans-serif">Rotterdam</text>
-      <text x="160" y="252" fill="#64748B" fontSize="9" fontFamily="Plus Jakarta Sans, sans-serif">HQ</text>
-    </g>
+    {/* Norway */}
+    <path
+      d="M220 20 L240 15 L260 25 L270 50 L265 80 L255 100 L245 90 L235 70 L225 50 L220 30 L220 20Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
     
-    {/* The Hague */}
-    <g className="cursor-pointer">
-      <circle cx="120" cy="210" r="6" fill="#0E7490" opacity="0.8" />
-      <circle cx="120" cy="210" r="2.5" fill="white" />
-      <text x="75" y="205" fill="#0F172A" fontSize="10" fontWeight="500" fontFamily="Plus Jakarta Sans, sans-serif">Den Haag</text>
-    </g>
+    {/* Sweden */}
+    <path
+      d="M260 50 L280 45 L295 60 L300 90 L295 120 L285 140 L270 130 L265 100 L260 70 L260 50Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
     
-    {/* Utrecht */}
-    <g className="cursor-pointer">
-      <circle cx="195" cy="195" r="6" fill="#0E7490" opacity="0.8" />
-      <circle cx="195" cy="195" r="2.5" fill="white" />
-      <text x="205" y="198" fill="#0F172A" fontSize="10" fontWeight="500" fontFamily="Plus Jakarta Sans, sans-serif">Utrecht</text>
-    </g>
+    {/* Finland */}
+    <path
+      d="M300 40 L320 35 L340 50 L345 80 L340 110 L325 120 L310 105 L305 75 L300 50 L300 40Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
     
-    {/* Eindhoven */}
-    <g className="cursor-pointer">
-      <circle cx="230" cy="310" r="5" fill="#0E7490" opacity="0.7" />
-      <circle cx="230" cy="310" r="2" fill="white" />
-      <text x="240" y="313" fill="#0F172A" fontSize="9" fontWeight="500" fontFamily="Plus Jakarta Sans, sans-serif">Eindhoven</text>
-    </g>
+    {/* UK & Ireland */}
+    <path
+      d="M140 100 L155 95 L165 105 L170 130 L165 155 L155 165 L140 160 L135 140 L140 115 L140 100Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    <path
+      d="M120 115 L130 110 L138 120 L135 140 L125 145 L115 135 L120 115Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
     
-    {/* Groningen */}
-    <g className="cursor-pointer">
-      <circle cx="280" cy="95" r="5" fill="#0E7490" opacity="0.7" />
-      <circle cx="280" cy="95" r="2" fill="white" />
-      <text x="290" y="98" fill="#0F172A" fontSize="9" fontWeight="500" fontFamily="Plus Jakarta Sans, sans-serif">Groningen</text>
-    </g>
+    {/* France */}
+    <path
+      d="M160 175 L190 170 L210 185 L220 215 L210 250 L180 260 L150 245 L145 215 L155 190 L160 175Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
     
-    {/* Randstad indicator */}
-    <g>
+    {/* Spain & Portugal */}
+    <path
+      d="M120 250 L170 245 L190 265 L185 305 L150 320 L115 310 L105 280 L110 260 L120 250Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    <path
+      d="M95 265 L110 260 L115 280 L110 300 L95 305 L85 290 L90 275 L95 265Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Italy */}
+    <path
+      d="M230 220 L250 215 L260 235 L255 270 L245 300 L235 310 L225 295 L220 260 L225 235 L230 220Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Germany */}
+    <path
+      d="M220 140 L250 135 L270 150 L275 180 L265 205 L240 210 L220 195 L215 165 L220 140Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Poland */}
+    <path
+      d="M275 130 L310 125 L330 145 L335 175 L320 195 L290 200 L270 180 L270 150 L275 130Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Belgium */}
+    <path
+      d="M190 160 L205 158 L212 170 L208 182 L195 185 L188 175 L190 160Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Austria, Czech, Slovakia, Hungary */}
+    <path
+      d="M260 185 L290 180 L320 195 L330 220 L315 245 L280 250 L255 235 L250 210 L260 185Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Balkans */}
+    <path
+      d="M290 250 L320 245 L350 270 L355 310 L335 340 L300 345 L275 320 L280 285 L290 250Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Greece */}
+    <path
+      d="M320 310 L345 305 L360 325 L355 355 L335 365 L315 350 L310 330 L320 310Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Baltic States */}
+    <path
+      d="M305 95 L325 90 L340 105 L338 130 L325 140 L310 135 L305 115 L305 95Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Denmark */}
+    <path
+      d="M230 105 L245 100 L255 112 L250 130 L238 135 L228 125 L230 105Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* Switzerland */}
+    <path
+      d="M210 205 L225 202 L232 215 L225 228 L212 230 L205 220 L210 205Z"
+      fill="url(#europeGradient)"
+      stroke="#CBD5E1"
+      strokeWidth="0.5"
+      opacity="0.5"
+    />
+    
+    {/* THE NETHERLANDS - Highlighted with pulse animation */}
+    <g className="netherlands-pulse" filter="url(#netherlandsGlow)">
       <path
-        d="M115 145 Q140 120 175 130 Q210 140 210 180 Q210 220 175 245 Q140 270 110 250 Q80 230 90 190 Q95 160 115 145Z"
-        fill="none"
-        stroke="#0E7490"
-        strokeWidth="2"
-        strokeDasharray="6 4"
-        opacity="0.6"
+        d="M195 125 L215 120 L225 130 L222 148 L210 158 L195 155 L188 142 L192 130 L195 125Z"
+        fill="#0E7490"
+        stroke="#0891B2"
+        strokeWidth="1.5"
       />
-      <text x="130" y="285" fill="#0E7490" fontSize="10" fontWeight="600" fontFamily="Plus Jakarta Sans, sans-serif">Randstad Region</text>
+      {/* Rotterdam marker */}
+      <circle cx="200" cy="148" r="4" fill="#ffffff" stroke="#0E7490" strokeWidth="1.5">
+        <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      {/* Amsterdam marker */}
+      <circle cx="205" cy="132" r="3" fill="#ffffff" stroke="#0E7490" strokeWidth="1"/>
     </g>
     
-    {/* North Sea label */}
-    <text x="40" y="180" fill="#94A3B8" fontSize="10" fontStyle="italic" fontFamily="Plus Jakarta Sans, sans-serif" transform="rotate(-20, 40, 180)">North Sea</text>
+    {/* Netherlands label */}
+    <g>
+      <text 
+        x="175" 
+        y="115" 
+        fill="#0E7490" 
+        fontSize="9" 
+        fontWeight="700" 
+        fontFamily="Plus Jakarta Sans, sans-serif"
+      >
+        Netherlands
+      </text>
+      <text 
+        x="175" 
+        y="125" 
+        fill="#0891B2" 
+        fontSize="7" 
+        fontFamily="Plus Jakarta Sans, sans-serif"
+      >
+        HQ: Rotterdam
+      </text>
+    </g>
     
-    {/* Germany border indicator */}
-    <text x="350" y="200" fill="#94A3B8" fontSize="9" fontFamily="Plus Jakarta Sans, sans-serif" transform="rotate(90, 350, 200)">Germany →</text>
+    {/* Europe label */}
+    <text 
+      x="380" 
+      y="380" 
+      fill="#94A3B8" 
+      fontSize="12" 
+      fontWeight="600" 
+      fontFamily="Plus Jakarta Sans, sans-serif"
+      opacity="0.6"
+    >
+      Europe
+    </text>
     
-    {/* Belgium border indicator */}
-    <text x="180" y="390" fill="#94A3B8" fontSize="9" fontFamily="Plus Jakarta Sans, sans-serif">Belgium ↓</text>
+    {/* Expansion arrows */}
+    <g opacity="0.4">
+      {/* Arrow to Germany */}
+      <path d="M220 145 L235 155" stroke="#0E7490" strokeWidth="1" strokeDasharray="3 2" markerEnd="url(#arrowhead)"/>
+      {/* Arrow to Belgium */}
+      <path d="M198 155 L200 170" stroke="#0E7490" strokeWidth="1" strokeDasharray="3 2"/>
+      {/* Arrow to UK */}
+      <path d="M190 140 L170 145" stroke="#0E7490" strokeWidth="1" strokeDasharray="3 2"/>
+    </g>
   </svg>
 );
 
@@ -221,12 +358,24 @@ export default function MarketFocusSection() {
             </div>
           </div>
 
-          {/* Map Visual */}
+          {/* Europe Map Visual */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 rounded-3xl p-6 md:p-8 border border-slate-100">
-              {/* Netherlands Map */}
-              <div className="relative aspect-[4/5] max-h-[480px]">
-                <NetherlandsMap />
+            <div className="bg-gradient-to-br from-slate-50 to-cyan-50/30 rounded-3xl p-6 md:p-8 border border-slate-100 shadow-sm">
+              {/* Europe Map */}
+              <div className="relative aspect-[5/4]">
+                <EuropeMap />
+              </div>
+              
+              {/* Legend */}
+              <div className="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-slate-100">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-cyan-700 rounded-full animate-pulse" />
+                  <span className="text-xs text-slate-600">Primary Market</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-slate-300 rounded-full" />
+                  <span className="text-xs text-slate-600">Expansion Markets</span>
+                </div>
               </div>
             </div>
 

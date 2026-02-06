@@ -6,21 +6,21 @@ const team = [
     name: "Meysam Rostami",
     role: "Co-founder & AI Engineer",
     bio: "Leading technical development with deep expertise in artificial intelligence, machine learning, and software engineering. Building the core algorithms powering PsyTech's assessment platform.",
-    initials: "MR",
+    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/ordcfcfr_99336.jpg",
     linkedin: "https://www.linkedin.com/in/meysam-rostami-874b2b212/",
   },
   {
     name: "Alale Mehranifar",
     role: "Co-founder & CEO",
     bio: "The visionary behind PsyTech's core concept. Leading company strategy, operations, and business development with a background in Biomedical Engineering and healthcare innovation.",
-    initials: "AM",
+    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/52rqirnu_Gemini_Generated_Image_n4wx9fn4wx9fn4wx___serialized1.png",
     linkedin: "https://www.linkedin.com/in/alalemehranifar/",
   },
   {
     name: "Morteza Asadi",
     role: "Co-founder & Sales Manager",
     bio: "Driving business development and strategic partnerships with deep expertise in HealthTech sales and market expansion.",
-    initials: "MA",
+    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/3uxhzoqp_99336....jpg",
     linkedin: "https://www.linkedin.com/in/mortezaasadi-nl",
   },
 ];
@@ -58,9 +58,13 @@ export default function TeamSection() {
               data-testid={`team-member-${index}`}
               className="group bg-slate-50 rounded-3xl p-8 text-center hover:bg-white hover:shadow-lg border border-transparent hover:border-slate-100 transition-all duration-300"
             >
-              {/* Avatar placeholder */}
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full avatar-placeholder text-3xl">
-                {member.initials}
+              {/* Photo */}
+              <div className="w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               <h3 className="text-xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
@@ -69,7 +73,7 @@ export default function TeamSection() {
               <p className="text-cyan-700 font-medium mb-4">
                 {member.role}
               </p>
-              <p className="text-slate-600 leading-relaxed mb-6">
+              <p className="text-slate-600 leading-relaxed mb-6 text-sm">
                 {member.bio}
               </p>
 

@@ -37,13 +37,13 @@ i18n
   });
 
 export const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧', dir: 'ltr' },
-  { code: 'nl', name: 'Nederlands', flag: '🇳🇱', dir: 'ltr' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪', dir: 'ltr' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷', dir: 'ltr' },
-  { code: 'fa', name: 'فارسی', flag: '🇮🇷', dir: 'rtl' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦', dir: 'rtl' },
-  { code: 'tr', name: 'Türkçe', flag: '🇹🇷', dir: 'ltr' }
+  { code: 'en', name: 'EN', flag: '🇬🇧', dir: 'ltr' },
+  { code: 'nl', name: 'NL', flag: '🇳🇱', dir: 'ltr' },
+  { code: 'de', name: 'DE', flag: '🇩🇪', dir: 'ltr' },
+  { code: 'fr', name: 'FR', flag: '🇫🇷', dir: 'ltr' },
+  { code: 'fa', name: 'FA', flag: '🇮🇷', dir: 'rtl' },
+  { code: 'ar', name: 'AR', flag: '🇸🇦', dir: 'rtl' },
+  { code: 'tr', name: 'TR', flag: '🇹🇷', dir: 'ltr' }
 ];
 
 export const isRTL = (lang) => ['fa', 'ar'].includes(lang);

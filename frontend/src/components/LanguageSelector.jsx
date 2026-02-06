@@ -8,7 +8,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
 
 export default function LanguageSelector({ variant = "default" }) {
   const { i18n } = useTranslation();
@@ -28,33 +27,30 @@ export default function LanguageSelector({ variant = "default" }) {
           variant="ghost"
           size="sm"
           data-testid="language-selector"
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-1.5 px-2 h-9 ${
             variant === "dark" 
               ? "text-slate-300 hover:text-white hover:bg-white/10" 
               : "text-slate-600 hover:text-cyan-700 hover:bg-cyan-50"
           }`}
         >
-          <Globe className="w-4 h-4" />
-          <span className="hidden sm:inline">{currentLang.flag} {currentLang.code.toUpperCase()}</span>
-          <span className="sm:hidden">{currentLang.flag}</span>
+          <span className="text-base">{currentLang.flag}</span>
+          <span className="text-xs font-medium">{currentLang.name}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent align="end" className="min-w-[100px]">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className={`flex items-center gap-3 cursor-pointer ${
+            className={`flex items-center gap-2 cursor-pointer px-3 py-2 ${
               i18n.language === lang.code ? "bg-cyan-50 text-cyan-700" : ""
             }`}
             data-testid={`lang-${lang.code}`}
           >
-            <span className="text-lg">{lang.flag}</span>
-            <span className={lang.dir === 'rtl' ? 'font-medium' : ''}>
-              {lang.name}
-            </span>
+            <span className="text-base">{lang.flag}</span>
+            <span className="text-sm font-medium">{lang.name}</span>
             {i18n.language === lang.code && (
-              <span className="ml-auto text-cyan-600">✓</span>
+              <span className="ml-auto text-cyan-600 text-xs">✓</span>
             )}
           </DropdownMenuItem>
         ))}

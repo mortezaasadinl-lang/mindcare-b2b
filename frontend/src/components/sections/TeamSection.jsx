@@ -4,14 +4,14 @@ import { Linkedin, Mail } from "lucide-react";
 const team = [
   {
     name: "Meysam Rostami",
-    role: "Co-founder & Project Manager",
-    bio: "Leading PsyTech's vision and strategy with expertise in project leadership, operational excellence, and healthcare innovation.",
+    role: "Co-founder & AI Engineer",
+    bio: "Leading technical development with deep expertise in artificial intelligence, machine learning, and software engineering. Building the core algorithms powering PsyTech's assessment platform.",
     initials: "MR",
   },
   {
-    name: "Alaleh Mehranifar",
-    role: "Co-founder & CTO",
-    bio: "Leading technology development with a background in AI and Biomedical Engineering, building the core algorithms behind PsyTech.",
+    name: "Alale Mehranifar",
+    role: "Co-founder & CEO",
+    bio: "The visionary behind PsyTech's core concept. Leading company strategy, operations, and business development with a background in Biomedical Engineering and healthcare innovation.",
     initials: "AM",
   },
   {

@@ -141,7 +141,7 @@ export default function Footer() {
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="mailto:psytech2026@gmail.com"
+              href="mailto:info@psy-tech.nl"
               aria-label="Email"
               className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"
             >

@@ -145,7 +145,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-slate-500">Email us at</p>
-                  <p className="font-semibold text-slate-900">psytech2026@gmail.com</p>
+                  <p className="font-semibold text-slate-900">info@psy-tech.nl</p>
                 </div>
               </div>
 

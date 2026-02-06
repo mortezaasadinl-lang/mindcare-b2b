@@ -648,6 +648,43 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ============ SCHEDULER SETUP ============
+
+scheduler = AsyncIOScheduler()
+
+async def scheduled_ai_post_generation():
+    """Scheduled task to generate and publish AI post"""
+    logger.info("Scheduled AI post generation triggered")
+    await generate_ai_post()
+    logger.info("Scheduled AI post generation completed")
+
+@app.on_event("startup")
+async def startup_scheduler():
+    """Start the APScheduler on application startup"""
+    # Schedule AI post generation for Monday and Thursday at 10:00 CET (9:00 UTC)
+    # CET = UTC+1 (winter) / UTC+2 (summer CEST)
+    # Using 9:00 UTC to approximate 10:00 CET
+    scheduler.add_job(
+        scheduled_ai_post_generation,
+        CronTrigger(
+            day_of_week='mon,thu',
+            hour=9,
+            minute=0,
+            timezone='UTC'
+        ),
+        id='ai_post_generation',
+        name='Generate AI blog post twice weekly',
+        replace_existing=True
+    )
+    scheduler.start()
+    logger.info("APScheduler started - AI posts scheduled for Monday & Thursday at 10:00 CET")
+
+@app.on_event("shutdown")
+async def shutdown_scheduler():
+    """Shutdown the scheduler gracefully"""
+    scheduler.shutdown(wait=False)
+    logger.info("APScheduler shut down")
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()

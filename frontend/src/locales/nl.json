@@ -151,8 +151,8 @@
     "title": "Ontmoet de Oprichters",
     "subtitle": "Een gepassioneerd team dat expertise in AI, gezondheidszorg en business development combineert.",
     "members": {
-      "meysam": { "name": "Meysam Rostami", "role": "Medeoprichter & Projectmanager", "bio": "Leidt PsyTech's visie en strategie met expertise in projectleiderschap en healthcare innovatie." },
-      "alaleh": { "name": "Alaleh Mehranifar", "role": "Medeoprichter & CTO", "bio": "Leidt technologie-ontwikkeling met een achtergrond in AI en Biomedische Technologie." },
+      "meysam": { "name": "Meysam Rostami", "role": "Medeoprichter & AI Engineer", "bio": "Leidt technische ontwikkeling met expertise in kunstmatige intelligentie, machine learning en software engineering." },
+      "alaleh": { "name": "Alale Mehranifar", "role": "Medeoprichter & CEO", "bio": "De visionair achter het kernconcept van PsyTech. Leidt bedrijfsstrategie en operaties met een achtergrond in Biomedische Technologie." },
       "morteza": { "name": "Morteza Asadi", "role": "Medeoprichter & Sales Manager", "bio": "Stimuleert bedrijfsontwikkeling en strategische partnerships met expertise in HealthTech sales." }
     },
     "credibility": "Ons team brengt jarenlange ervaring samen in <ai>AI-onderzoek</ai>, <psychology>klinische psychologie</psychology> en <tech>healthcare technologie</tech>."

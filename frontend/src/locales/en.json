@@ -151,8 +151,8 @@
     "title": "Meet the Founders",
     "subtitle": "A passionate team combining expertise in AI, healthcare, and business development to transform mental health assessment.",
     "members": {
-      "meysam": { "name": "Meysam Rostami", "role": "Co-founder & Project Manager", "bio": "Leading PsyTech's vision and strategy with expertise in project leadership, operational excellence, and healthcare innovation." },
-      "alaleh": { "name": "Alaleh Mehranifar", "role": "Co-founder & CTO", "bio": "Leading technology development with a background in AI and Biomedical Engineering, building the core algorithms behind PsyTech." },
+      "meysam": { "name": "Meysam Rostami", "role": "Co-founder & AI Engineer", "bio": "Leading technical development with deep expertise in artificial intelligence, machine learning, and software engineering. Building the core algorithms powering PsyTech's assessment platform." },
+      "alaleh": { "name": "Alale Mehranifar", "role": "Co-founder & CEO", "bio": "The visionary behind PsyTech's core concept. Leading company strategy, operations, and business development with a background in Biomedical Engineering and healthcare innovation." },
       "morteza": { "name": "Morteza Asadi", "role": "Co-founder & Sales Manager", "bio": "Driving business development and strategic partnerships with deep expertise in HealthTech sales and market expansion." }
     },
     "credibility": "Our team brings together years of experience in <ai>AI research</ai>, <psychology>clinical psychology</psychology>, and <tech>healthcare technology</tech> to build solutions that make a real difference in people's lives."

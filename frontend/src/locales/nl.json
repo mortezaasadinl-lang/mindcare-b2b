@@ -1,0 +1,283 @@
+{
+  "nav": {
+    "solution": "Oplossing",
+    "howItWorks": "Hoe Het Werkt",
+    "benefits": "Voordelen",
+    "team": "Team",
+    "faq": "FAQ",
+    "insights": "Inzichten",
+    "contact": "Contact",
+    "requestDemo": "Demo Aanvragen"
+  },
+  "hero": {
+    "badge1": "AVG Conform",
+    "badge2": "AI-Aangedreven",
+    "title": "Transformeer Mentale Gezondheid Assessment met",
+    "titleHighlight": "AI Precisie",
+    "subtitle": "PsyTech levert gepersonaliseerde, bias-gereduceerde, AVG-conforme psychologische inzichten met behulp van geavanceerde AI en adaptieve testen voor zorgverleners, instellingen en bedrijven in heel Europa.",
+    "cta1": "Demo Aanvragen",
+    "cta2": "Ontdek Hoe Het Werkt",
+    "stat1": "Snellere Assessments",
+    "stat2": "Nauwkeurigheid",
+    "stat3": "AVG Conform"
+  },
+  "problem": {
+    "label": "De Uitdaging",
+    "title": "Traditionele Psychologische Assessments Zijn",
+    "titleHighlight": "Gebroken",
+    "subtitle": "Huidige methoden voor mentale gezondheidsassessment kennen aanzienlijke beperkingen die miljoenen mensen treffen die op zoek zijn naar een goede psychologische evaluatie.",
+    "items": {
+      "scope": { "title": "Beperkte Reikwijdte", "desc": "Traditionele tests meten alleen specifieke eigenschappen en missen het volledige beeld van iemands psychologisch profiel." },
+      "errors": { "title": "Handmatige Scorefouten", "desc": "Mensafhankelijke scoring introduceert inconsistenties en fouten die de betrouwbaarheid van assessments beïnvloeden." },
+      "personal": { "title": "Gebrek aan Personalisatie", "desc": "One-size-fits-all benaderingen houden geen rekening met individuele verschillen en culturele contexten." },
+      "bias": { "title": "Inherente Bias", "desc": "Culturele, gender- en raciale vooroordelen in traditionele assessments leiden tot oneerlijke en onnauwkeurige resultaten." },
+      "waiting": { "title": "Lange Wachttijden", "desc": "Het Nederlandse GGZ-systeem kampt met ernstige achterstanden, waarbij patiënten maanden wachten op assessments." },
+      "inefficient": { "title": "Inefficiënte Processen", "desc": "Handmatige administratie en analyse creëren knelpunten die kritieke interventies vertragen." }
+    },
+    "stats": {
+      "people": "Mensen wachtend op GGZ in Nederland",
+      "weeks": "Gemiddelde wachttijd voor psychologisch assessment",
+      "error": "Foutpercentage bij handmatige scoring"
+    }
+  },
+  "solution": {
+    "label": "Onze Oplossing",
+    "title": "AI-Aangedreven Mentale Gezondheid",
+    "titleHighlight": "Intelligentie",
+    "subtitle": "PsyTech combineert geavanceerde kunstmatige intelligentie met klinische psychologie-expertise om assessments te leveren die sneller, eerlijker en nauwkeuriger zijn dan traditionele methoden.",
+    "items": {
+      "adaptive": { "title": "Adaptieve Real-time Assessments", "desc": "Onze AI past vragen dynamisch aan op basis van antwoorden, waardoor een gepersonaliseerde assessment-reis ontstaat." },
+      "profiles": { "title": "Gepersonaliseerde Analytische Profielen", "desc": "Genereer uitgebreide psychologische profielen afgestemd op individuele behoeften en culturele contexten." },
+      "bias": { "title": "Bias Mitigatie Technologie", "desc": "Geavanceerde algoritmen identificeren en verminderen actief culturele, gender- en raciale vooroordelen." },
+      "insights": { "title": "Actioneerbare Inzichten", "desc": "Transformeer complexe psychologische data naar duidelijke, begrijpelijke inzichten." }
+    },
+    "features": {
+      "realtime": "Real-time dataverwerking",
+      "multilingual": "Meertalige ondersteuning",
+      "clinical": "Klinische nauwkeurigheid",
+      "gdpr": "AVG-conforme opslag",
+      "integration": "Naadloze integratie",
+      "learning": "Continu lerende AI"
+    }
+  },
+  "howItWorks": {
+    "label": "Het Proces",
+    "title": "Hoe PsyTech Werkt",
+    "subtitle": "Een gestroomlijnd, vierstaps proces dat complexe psychologische assessment transformeert naar actioneerbare inzichten binnen minuten.",
+    "steps": {
+      "step1": { "title": "Voltooi Assessment", "desc": "Gebruiker voltooit adaptieve assessments online via ons intuïtieve platform." },
+      "step2": { "title": "AI Analyse", "desc": "Onze geavanceerde AI analyseert antwoorden in real-time en identificeert patronen." },
+      "step3": { "title": "Profiel Generatie", "desc": "Het systeem genereert een uitgebreid psychologisch profiel met aanbevelingen." },
+      "step4": { "title": "Actioneerbare Inzichten", "desc": "Professionals en gebruikers ontvangen duidelijke inzichten voor besluitvorming." }
+    },
+    "completion": "Gemiddelde doorlooptijd:"
+  },
+  "benefits": {
+    "label": "Voordelen",
+    "title": "Mentale Gezondheid Transformeren voor",
+    "titleHighlight": "Iedereen",
+    "subtitle": "Of u nu een individu bent dat zelfkennis zoekt of een organisatie die haar mensen wil ondersteunen, PsyTech levert meetbare waarde.",
+    "individuals": {
+      "title": "Voor Individuen",
+      "desc": "Krijg dieper zelfinzicht en neem geïnformeerde beslissingen over uw mentale gezondheid en persoonlijke ontwikkeling.",
+      "features": ["Gepersonaliseerde psychologische inzichten", "Loopbaanbegeleiding op basis van persoonlijkheid", "Mentale wellness aanbevelingen", "Voortgang volgen over tijd"]
+    },
+    "healthcare": {
+      "title": "Voor Zorgverleners",
+      "desc": "Verminder assessmenttijd met 40% terwijl de nauwkeurigheid verbetert. Stroomlijn patiëntintake en focus op zorg.",
+      "features": ["40% snellere assessments", "Verminderde administratieve last", "Integratie met klinische workflows", "Evidence-based aanbevelingen"]
+    },
+    "education": {
+      "title": "Voor Onderwijsinstellingen",
+      "desc": "Ondersteun studentenwelzijn met vroege interventietools. Begeleid academische en loopbaankeuzes met data-gedreven inzichten.",
+      "features": ["Vroege mentale gezondheidsscreening", "Academische aanleg assessment", "Loopbaanadvies ondersteuning", "Schaalbaar voor grote studentenpopulaties"]
+    },
+    "corporate": {
+      "title": "Voor Bedrijven",
+      "desc": "Verbeter wervingsbeslissingen en werknemerswelzijnsprogramma's. Bouw sterkere teams met psychologische inzichten.",
+      "features": ["Bias-vrije wervingsscreening", "Teamcompatibiliteitsanalyse", "Werknemerswelzijn monitoring", "Leiderschapspotentieel assessment"]
+    }
+  },
+  "usp": {
+    "label": "Waarom PsyTech",
+    "title": "Wat Ons Onderscheidt",
+    "subtitle": "PsyTech combineert geavanceerde technologie met klinische expertise om assessments te leveren die de GGZ-industrie transformeren.",
+    "items": {
+      "ai": { "title": "AI-Aangedreven Diepe Analyse", "desc": "Geavanceerde machine learning algoritmen analyseren antwoorden op een diepte die onmogelijk is voor traditionele methoden." },
+      "adaptive": { "title": "Gepersonaliseerde Adaptieve Testing", "desc": "Vragen passen zich real-time aan op basis van individuele antwoorden." },
+      "biasFree": { "title": "Bias-Vrije Assessments", "desc": "Ingebouwde bias detectie en mitigatie zorgt voor eerlijke resultaten." },
+      "realtime": { "title": "Real-Time Interpretatie", "desc": "Directe analyse en inzichten - geen weken wachten op resultaten." },
+      "scalable": { "title": "Schaalbaar B2B & B2C", "desc": "Van individuele assessments tot enterprise-brede implementaties." },
+      "gdpr": { "title": "AVG Conform & Veilig", "desc": "Europese gegevensbeschermingsstandaarden met end-to-end encryptie." }
+    },
+    "trust": {
+      "iso": "ISO 27001 Beveiligingsstandaarden",
+      "gdpr": "AVG Conform",
+      "eu": "EU Data Residentie"
+    }
+  },
+  "market": {
+    "label": "Marktfocus",
+    "title": "Ontworpen voor",
+    "titleHighlight": "Europese Gezondheidszorg",
+    "subtitle": "PsyTech is vanaf de basis gebouwd om de unieke uitdagingen van GGZ-systemen in Nederland en heel Europa aan te pakken.",
+    "items": {
+      "netherlands": { "title": "Nederland Eerst", "desc": "Ontwikkeld in nauwe samenwerking met Nederlandse zorgverleners en afgestemd op lokale regelgeving." },
+      "europe": { "title": "Europese Expansie", "desc": "Schaalbaar platform klaar om gezondheidszorgsystemen in de hele EU te bedienen met volledige AVG-conformiteit." },
+      "demand": { "title": "Groeiende GGZ Vraag", "desc": "Aanpakken van de toename in GGZ-behoeften versneld door de pandemie en moderne werkdruk." },
+      "waiting": { "title": "Wachtlijsten Verkorten", "desc": "Specifiek ontworpen om de achterstand van wachtende patiënten in overbelaste systemen te helpen verminderen." }
+    },
+    "stats": {
+      "market": "EU GGZ Markt",
+      "growth": "Jaarlijkse Groei"
+    }
+  },
+  "impact": {
+    "label": "Onze Impact",
+    "title": "Betekenisvolle Verandering Creëren",
+    "subtitle": "PsyTech zet zich in voor het transformeren van hoe mentale gezondheid wordt begrepen en ondersteund.",
+    "items": {
+      "mental": { "title": "Verbetering Mentale Gezondheid", "desc": "Mogelijkheid voor vroege detectie en interventie voor mentale gezondheidsproblemen.", "stat": "3x", "statLabel": "Vroegere detectie" },
+      "decision": { "title": "Betere Besluitvorming", "desc": "Geef individuen inzichten om geïnformeerde persoonlijke en loopbaanbeslissingen te nemen.", "stat": "85%", "statLabel": "Gebruikerstevredenheid" },
+      "academic": { "title": "Academische Begeleiding", "desc": "Help studenten hun sterke punten te ontdekken en de juiste academische en loopbaanpaden te vinden.", "stat": "40%", "statLabel": "Betere loopbaanmatches" },
+      "workforce": { "title": "Werknemersoptimalisatie", "desc": "Bouw sterkere, veerkrachtigere teams met data-gedreven werving en ontwikkelingsinzichten.", "stat": "25%", "statLabel": "Verminderd verloop" },
+      "inclusivity": { "title": "Inclusiviteit & Toegankelijkheid", "desc": "Maak kwaliteitsvolle psychologische assessment toegankelijk voor iedereen.", "stat": "100%", "statLabel": "Bias mitigatie" }
+    },
+    "quote": "Onze missie is om toegang tot kwaliteitsvolle psychologische assessment te democratiseren, zodat GGZ-ondersteuning beschikbaar is voor iedereen die het nodig heeft.",
+    "quoteAuthor": "— Het PsyTech Team"
+  },
+  "team": {
+    "label": "Ons Team",
+    "title": "Ontmoet de Oprichters",
+    "subtitle": "Een gepassioneerd team dat expertise in AI, gezondheidszorg en business development combineert.",
+    "members": {
+      "meysam": { "name": "Meysam Rostami", "role": "Medeoprichter & Projectmanager", "bio": "Leidt PsyTech's visie en strategie met expertise in projectleiderschap en healthcare innovatie." },
+      "alaleh": { "name": "Alaleh Mehranifar", "role": "Medeoprichter & CTO", "bio": "Leidt technologie-ontwikkeling met een achtergrond in AI en Biomedische Technologie." },
+      "morteza": { "name": "Morteza Asadi", "role": "Medeoprichter & Sales Manager", "bio": "Stimuleert bedrijfsontwikkeling en strategische partnerships met expertise in HealthTech sales." }
+    },
+    "credibility": "Ons team brengt jarenlange ervaring samen in <ai>AI-onderzoek</ai>, <psychology>klinische psychologie</psychology> en <tech>healthcare technologie</tech>."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Vind antwoorden op veelgestelde vragen over PsyTech's platform, technologie en implementatie.",
+    "items": {
+      "accuracy": { "q": "Hoe waarborgt PsyTech de nauwkeurigheid van AI-aangedreven assessments?", "a": "Onze assessments zijn ontwikkeld in samenwerking met klinisch psychologen en gevalideerd tegen gevestigde psychologische instrumenten." },
+      "gdpr": { "q": "Is PsyTech AVG-conform?", "a": "Ja, absoluut. PsyTech is vanaf de basis gebouwd met AVG-conformiteit als kernvereiste. Alle gegevens worden verwerkt en opgeslagen binnen de EU." },
+      "duration": { "q": "Hoe lang duurt een typische assessment?", "a": "De meeste PsyTech assessments duren tussen 15-20 minuten. De adaptieve aard betekent dat de duur kan variëren op basis van individuele antwoorden." },
+      "integration": { "q": "Kan PsyTech integreren met bestaande zorgsystemen?", "a": "Ja, PsyTech biedt API-integraties voor naadloze verbinding met bestaande EPD's en praktijkmanagementsystemen." },
+      "types": { "q": "Welke soorten assessments biedt PsyTech?", "a": "PsyTech biedt cognitieve vaardigheidstests, persoonlijkheidsassessments, emotionele intelligentie-evaluaties en welzijnsscreenings." },
+      "bias": { "q": "Hoe pakt PsyTech bias in psychologische testing aan?", "a": "Onze AI-modellen zijn specifiek ontworpen om culturele, gender- en raciale vooroordelen te detecteren en te mitigeren." },
+      "users": { "q": "Is PsyTech geschikt voor individuele gebruikers of alleen organisaties?", "a": "PsyTech bedient zowel B2B als B2C markten. Individuen kunnen onze assessments gebruiken voor persoonlijke ontwikkeling." },
+      "support": { "q": "Welke ondersteuning bieden jullie voor implementatie?", "a": "We bieden uitgebreide onboarding-ondersteuning inclusief technische integratie, gebruikerstraining en doorlopend customer success management." }
+    },
+    "moreQuestions": "Nog vragen?",
+    "contactTeam": "Neem contact op"
+  },
+  "contact": {
+    "label": "Neem Contact Op",
+    "title": "Laten We Mentale Gezondheid Transformeren",
+    "titleHighlight": "Samen",
+    "subtitle": "Klaar om te zien hoe PsyTech uw organisatie kan helpen? Vraag een demo aan of bespreek samenwerkingsmogelijkheden.",
+    "email": "E-mail ons op",
+    "location": "Gevestigd in",
+    "trust": "Vertrouwd door organisaties in heel Europa",
+    "form": {
+      "name": "Volledige Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer (optioneel)",
+      "company": "Bedrijf / Organisatie",
+      "companyType": "Type Organisatie",
+      "companyTypePlaceholder": "Selecteer organisatietype",
+      "message": "Uw Bericht",
+      "messagePlaceholder": "Vertel ons over uw behoeften...",
+      "submit": "Bericht Versturen",
+      "sending": "Versturen...",
+      "privacy": "Door dit formulier in te dienen, gaat u akkoord met ons",
+      "privacyPolicy": "Privacybeleid",
+      "privacyNote": "Wij respecteren uw gegevens en delen deze nooit met derden."
+    },
+    "companyTypes": {
+      "mental_health_clinic": "GGZ Kliniek / Praktijk",
+      "hospital": "Ziekenhuis / Zorgsysteem",
+      "university": "Universiteit / Onderwijsinstelling",
+      "corporate": "Bedrijf / Onderneming",
+      "hr_recruitment": "HR / Werving & Selectie",
+      "research": "Onderzoeksorganisatie",
+      "government": "Overheid / Publieke Sector",
+      "investor": "Investeerder / VC",
+      "individual": "Individu / Persoonlijk Gebruik",
+      "other": "Anders"
+    },
+    "success": {
+      "title": "Bedankt!",
+      "message": "Uw bericht is ontvangen. Ons team neemt binnen 24-48 uur contact met u op.",
+      "another": "Nog Een Bericht Sturen"
+    }
+  },
+  "footer": {
+    "tagline": "Mentale gezondheidsassessment transformeren met AI-gedreven precisie en empathie. Gebouwd in Nederland voor Europa en daarbuiten.",
+    "gdpr": "AVG Conform",
+    "product": "Product",
+    "company": "Bedrijf",
+    "legal": "Juridisch",
+    "features": "Functies",
+    "aboutUs": "Over Ons",
+    "careers": "Vacatures",
+    "press": "Pers",
+    "privacyPolicy": "Privacybeleid",
+    "terms": "Algemene Voorwaarden",
+    "cookies": "Cookiebeleid",
+    "gdprCompliance": "AVG Conformiteit",
+    "copyright": "© {{year}} PsyTech. Alle rechten voorbehouden.",
+    "dataNotice": "Uw gegevens worden verwerkt en opgeslagen binnen de Europese Unie conform de AVG."
+  },
+  "insights": {
+    "title": "Inzichten",
+    "subtitle": "Expertperspectieven op AI-gedreven mentale gezondheidsassessment, klinische innovatie en de toekomst van psychologische evaluatie.",
+    "search": "Zoek artikelen...",
+    "allTags": "Alle Onderwerpen",
+    "readMore": "Lees Meer",
+    "readTime": "min leestijd",
+    "noResults": "Geen artikelen gevonden",
+    "noResultsDesc": "Probeer uw zoek- of filtercriteria aan te passen.",
+    "backToBlog": "Terug naar Inzichten",
+    "translationNote": "Dit artikel is nog niet beschikbaar in uw taal. Engelse versie wordt getoond.",
+    "shareArticle": "Deel dit artikel",
+    "relatedPosts": "Gerelateerde Artikelen",
+    "publishedOn": "Gepubliceerd op"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "posts": "Posts",
+    "createPost": "Post Aanmaken",
+    "editPost": "Post Bewerken",
+    "allPosts": "Alle Posts",
+    "drafts": "Concepten",
+    "published": "Gepubliceerd",
+    "aiGenerated": "AI Gegenereerd",
+    "generateAI": "AI Post Genereren",
+    "generating": "Genereren...",
+    "publish": "Publiceren",
+    "unpublish": "Depubliceren",
+    "delete": "Verwijderen",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "cancel": "Annuleren",
+    "form": {
+      "title": "Titel",
+      "summary": "Samenvatting",
+      "content": "Inhoud (Markdown)",
+      "tags": "Tags (komma gescheiden)",
+      "language": "Taal",
+      "heroImage": "Hero Afbeelding URL",
+      "seoTitle": "SEO Titel",
+      "seoDescription": "SEO Beschrijving"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Er ging iets mis",
+    "required": "Verplicht"
+  }
+}

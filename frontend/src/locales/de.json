@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "solution": "Lösung",
+    "howItWorks": "So funktioniert's",
+    "benefits": "Vorteile",
+    "team": "Team",
+    "faq": "FAQ",
+    "insights": "Einblicke",
+    "contact": "Kontakt",
+    "requestDemo": "Demo Anfordern"
+  },
+  "hero": {
+    "badge1": "DSGVO-konform",
+    "badge2": "KI-gesteuert",
+    "title": "Transformieren Sie die psychologische Bewertung mit",
+    "titleHighlight": "KI-Präzision",
+    "subtitle": "PsyTech liefert personalisierte, bias-reduzierte, DSGVO-konforme psychologische Einblicke mit fortschrittlicher KI für Gesundheitsdienstleister, Institutionen und Unternehmen in ganz Europa.",
+    "cta1": "Demo Anfordern",
+    "cta2": "Erfahren Sie Mehr",
+    "stat1": "Schnellere Bewertungen",
+    "stat2": "Genauigkeit",
+    "stat3": "DSGVO-konform"
+  },
+  "problem": {
+    "label": "Die Herausforderung",
+    "title": "Traditionelle psychologische Bewertungen sind",
+    "titleHighlight": "Veraltet",
+    "subtitle": "Aktuelle Methoden zur psychischen Gesundheitsbewertung weisen erhebliche Einschränkungen auf, die Millionen von Menschen betreffen.",
+    "items": {
+      "scope": { "title": "Begrenzter Umfang", "desc": "Traditionelle Tests messen nur bestimmte Eigenschaften und verpassen das vollständige Bild." },
+      "errors": { "title": "Manuelle Bewertungsfehler", "desc": "Menschenabhängige Bewertung führt zu Inkonsistenzen und Fehlern." },
+      "personal": { "title": "Mangelnde Personalisierung", "desc": "Einheitsansätze berücksichtigen keine individuellen Unterschiede." },
+      "bias": { "title": "Inhärente Voreingenommenheit", "desc": "Kulturelle, geschlechtliche und rassische Vorurteile führen zu unfairen Ergebnissen." },
+      "waiting": { "title": "Lange Wartezeiten", "desc": "Das Gesundheitssystem kämpft mit schweren Rückständen bei psychologischen Bewertungen." },
+      "inefficient": { "title": "Ineffiziente Prozesse", "desc": "Manuelle Verwaltung und Analyse verzögern kritische Interventionen." }
+    },
+    "stats": {
+      "people": "Menschen warten auf psychische Gesundheitsversorgung",
+      "weeks": "Durchschnittliche Wartezeit",
+      "error": "Fehlerquote bei manueller Bewertung"
+    }
+  },
+  "solution": {
+    "label": "Unsere Lösung",
+    "title": "KI-gesteuerte psychische Gesundheits-",
+    "titleHighlight": "Intelligenz",
+    "subtitle": "PsyTech kombiniert modernste KI mit klinischer Psychologie-Expertise für schnellere, fairere und genauere Bewertungen.",
+    "items": {
+      "adaptive": { "title": "Adaptive Echtzeit-Bewertungen", "desc": "Unsere KI passt Fragen dynamisch basierend auf Antworten an." },
+      "profiles": { "title": "Personalisierte analytische Profile", "desc": "Umfassende psychologische Profile, angepasst an individuelle Bedürfnisse." },
+      "bias": { "title": "Bias-Minderungstechnologie", "desc": "Fortschrittliche Algorithmen identifizieren und reduzieren aktiv Vorurteile." },
+      "insights": { "title": "Umsetzbare Einblicke", "desc": "Komplexe psychologische Daten in klare, verständliche Einblicke umwandeln." }
+    },
+    "features": {
+      "realtime": "Echtzeit-Datenverarbeitung",
+      "multilingual": "Mehrsprachige Unterstützung",
+      "clinical": "Klinische Genauigkeit",
+      "gdpr": "DSGVO-konforme Speicherung",
+      "integration": "Nahtlose Integration",
+      "learning": "Kontinuierlich lernende KI"
+    }
+  },
+  "howItWorks": {
+    "label": "Der Prozess",
+    "title": "So funktioniert PsyTech",
+    "subtitle": "Ein optimierter, vierstufiger Prozess, der komplexe psychologische Bewertungen in umsetzbare Einblicke verwandelt.",
+    "steps": {
+      "step1": { "title": "Bewertung abschließen", "desc": "Benutzer absolviert adaptive Bewertungen online über unsere Plattform." },
+      "step2": { "title": "KI-Analyse", "desc": "Unsere fortschrittliche KI analysiert Antworten in Echtzeit." },
+      "step3": { "title": "Profilerstellung", "desc": "Das System erstellt ein umfassendes psychologisches Profil." },
+      "step4": { "title": "Umsetzbare Einblicke", "desc": "Fachleute und Benutzer erhalten klare Einblicke für Entscheidungen." }
+    },
+    "completion": "Durchschnittliche Bearbeitungszeit:"
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lassen Sie uns die psychische Gesundheit transformieren",
+    "titleHighlight": "Gemeinsam",
+    "subtitle": "Bereit zu sehen, wie PsyTech Ihrer Organisation helfen kann? Fordern Sie eine Demo an oder besprechen Sie Partnerschaftsmöglichkeiten.",
+    "email": "E-Mail an",
+    "location": "Standort",
+    "trust": "Vertraut von Organisationen in ganz Europa",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer (optional)",
+      "company": "Unternehmen / Organisation",
+      "companyType": "Organisationstyp",
+      "companyTypePlaceholder": "Organisationstyp auswählen",
+      "message": "Ihre Nachricht",
+      "messagePlaceholder": "Erzählen Sie uns von Ihren Anforderungen...",
+      "submit": "Nachricht Senden",
+      "sending": "Senden...",
+      "privacy": "Mit dem Absenden stimmen Sie unserer",
+      "privacyPolicy": "Datenschutzerklärung",
+      "privacyNote": "zu. Wir respektieren Ihre Daten."
+    },
+    "companyTypes": {
+      "mental_health_clinic": "Psychiatrische Klinik / Praxis",
+      "hospital": "Krankenhaus / Gesundheitssystem",
+      "university": "Universität / Bildungseinrichtung",
+      "corporate": "Unternehmen",
+      "hr_recruitment": "HR / Personalvermittlung",
+      "research": "Forschungsorganisation",
+      "government": "Regierung / Öffentlicher Sektor",
+      "investor": "Investor / VC",
+      "individual": "Einzelperson",
+      "other": "Sonstige"
+    },
+    "success": {
+      "title": "Vielen Dank!",
+      "message": "Ihre Nachricht wurde empfangen. Unser Team wird sich innerhalb von 24-48 Stunden bei Ihnen melden.",
+      "another": "Weitere Nachricht Senden"
+    }
+  },
+  "footer": {
+    "tagline": "Transformation der psychischen Gesundheitsbewertung mit KI-gesteuerter Präzision. In den Niederlanden für Europa entwickelt.",
+    "gdpr": "DSGVO-konform",
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "copyright": "© {{year}} PsyTech. Alle Rechte vorbehalten.",
+    "dataNotice": "Ihre Daten werden innerhalb der EU gemäß DSGVO verarbeitet und gespeichert."
+  },
+  "insights": {
+    "title": "Einblicke",
+    "subtitle": "Expertenperspektiven zu KI-gesteuerter psychischer Gesundheitsbewertung und klinischer Innovation.",
+    "search": "Artikel suchen...",
+    "allTags": "Alle Themen",
+    "readMore": "Mehr Lesen",
+    "readTime": "Min. Lesezeit",
+    "noResults": "Keine Artikel gefunden",
+    "backToBlog": "Zurück zu Einblicke",
+    "translationNote": "Dieser Artikel ist noch nicht in Ihrer Sprache verfügbar."
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Etwas ist schief gelaufen",
+    "required": "Erforderlich"
+  }
+}

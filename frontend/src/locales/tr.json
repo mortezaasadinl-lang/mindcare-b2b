@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "solution": "Çözüm",
+    "howItWorks": "Nasıl Çalışır",
+    "benefits": "Faydalar",
+    "team": "Ekip",
+    "faq": "SSS",
+    "insights": "İçgörüler",
+    "contact": "İletişim",
+    "requestDemo": "Demo Talep Et"
+  },
+  "hero": {
+    "badge1": "GDPR Uyumlu",
+    "badge2": "Yapay Zeka Destekli",
+    "title": "Ruh Sağlığı Değerlendirmesini Dönüştürün",
+    "titleHighlight": "Yapay Zeka Hassasiyetiyle",
+    "subtitle": "PsyTech, Avrupa genelinde sağlık hizmeti sağlayıcıları, kurumlar ve şirketler için gelişmiş yapay zeka kullanarak kişiselleştirilmiş, önyargısız, GDPR uyumlu psikolojik içgörüler sunar.",
+    "cta1": "Demo Talep Et",
+    "cta2": "Nasıl Çalıştığını Öğren",
+    "stat1": "Daha Hızlı Değerlendirmeler",
+    "stat2": "Doğruluk Oranı",
+    "stat3": "GDPR Uyumlu"
+  },
+  "problem": {
+    "label": "Zorluk",
+    "title": "Geleneksel Psikolojik Değerlendirmeler",
+    "titleHighlight": "Modası Geçmiş",
+    "subtitle": "Mevcut ruh sağlığı değerlendirme yöntemleri, milyonlarca insanı etkileyen önemli sınırlamalarla karşı karşıya.",
+    "items": {
+      "scope": { "title": "Sınırlı Kapsam", "desc": "Geleneksel testler yalnızca belirli özellikleri ölçer, tam resmi kaçırır." },
+      "errors": { "title": "Manuel Puanlama Hataları", "desc": "İnsana bağımlı puanlama tutarsızlıklar ve hatalar getirir." },
+      "personal": { "title": "Kişiselleştirme Eksikliği", "desc": "Tek tip yaklaşımlar bireysel farklılıkları dikkate almaz." },
+      "bias": { "title": "Doğal Önyargı", "desc": "Kültürel, cinsiyet ve ırk önyargıları adaletsiz sonuçlara yol açar." },
+      "waiting": { "title": "Uzun Bekleme Süreleri", "desc": "Ruh sağlığı sistemleri ciddi birikimlerle karşı karşıya." },
+      "inefficient": { "title": "Verimsiz Süreçler", "desc": "Manuel yönetim ve analiz darboğazlar oluşturur." }
+    }
+  },
+  "solution": {
+    "label": "Çözümümüz",
+    "title": "Yapay Zeka Destekli Ruh Sağlığı",
+    "titleHighlight": "Zekası",
+    "subtitle": "PsyTech, daha hızlı, daha adil ve daha doğru değerlendirmeler sunmak için son teknoloji yapay zekayı klinik psikoloji uzmanlığıyla birleştirir.",
+    "items": {
+      "adaptive": { "title": "Adaptif Gerçek Zamanlı Değerlendirmeler", "desc": "Yapay zekamız yanıtlara göre soruları dinamik olarak ayarlar." },
+      "profiles": { "title": "Kişiselleştirilmiş Analitik Profiller", "desc": "Bireysel ihtiyaçlara göre uyarlanmış kapsamlı psikolojik profiller." },
+      "bias": { "title": "Önyargı Azaltma Teknolojisi", "desc": "Önyargıları aktif olarak tespit eden ve azaltan gelişmiş algoritmalar." },
+      "insights": { "title": "Eyleme Dönüştürülebilir İçgörüler", "desc": "Karmaşık psikolojik veriler net, anlaşılır içgörülere dönüştürülür." }
+    }
+  },
+  "contact": {
+    "label": "İletişime Geçin",
+    "title": "Ruh Sağlığını Birlikte",
+    "titleHighlight": "Dönüştürelim",
+    "subtitle": "PsyTech'in kuruluşunuza nasıl fayda sağlayabileceğini görmeye hazır mısınız? Demo talep edin veya ortaklık fırsatlarını görüşün.",
+    "email": "E-posta",
+    "location": "Konum",
+    "trust": "Avrupa genelinde kuruluşlar tarafından güvenilir",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası (isteğe bağlı)",
+      "company": "Şirket / Kuruluş",
+      "companyType": "Kuruluş Türü",
+      "companyTypePlaceholder": "Kuruluş türünü seçin",
+      "message": "Mesajınız",
+      "messagePlaceholder": "İhtiyaçlarınızı bize anlatın...",
+      "submit": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "privacy": "Bu formu göndererek,",
+      "privacyPolicy": "Gizlilik Politikamızı",
+      "privacyNote": "kabul etmiş olursunuz. Verilerinize saygı duyuyoruz."
+    },
+    "companyTypes": {
+      "mental_health_clinic": "Ruh Sağlığı Kliniği",
+      "hospital": "Hastane / Sağlık Sistemi",
+      "university": "Üniversite / Eğitim Kurumu",
+      "corporate": "Şirket / Kuruluş",
+      "hr_recruitment": "İK / İşe Alım",
+      "research": "Araştırma Kuruluşu",
+      "government": "Hükümet / Kamu Sektörü",
+      "investor": "Yatırımcı",
+      "individual": "Bireysel / Kişisel Kullanım",
+      "other": "Diğer"
+    },
+    "success": {
+      "title": "Teşekkürler!",
+      "message": "Mesajınız alındı. Ekibimiz 24-48 saat içinde sizinle iletişime geçecektir.",
+      "another": "Başka Bir Mesaj Gönder"
+    }
+  },
+  "footer": {
+    "tagline": "Yapay zeka destekli hassasiyetle ruh sağlığı değerlendirmesini dönüştürüyoruz. Hollanda'da Avrupa için inşa edildi.",
+    "gdpr": "GDPR Uyumlu",
+    "product": "Ürün",
+    "company": "Şirket",
+    "legal": "Yasal",
+    "copyright": "© {{year}} PsyTech. Tüm hakları saklıdır.",
+    "dataNotice": "Verileriniz GDPR uyumlu olarak AB içinde işlenir ve saklanır."
+  },
+  "insights": {
+    "title": "İçgörüler",
+    "subtitle": "Yapay zeka destekli ruh sağlığı değerlendirmesi ve klinik inovasyon hakkında uzman görüşleri.",
+    "search": "Makale ara...",
+    "allTags": "Tüm Konular",
+    "readMore": "Devamını Oku",
+    "readTime": "dk okuma",
+    "noResults": "Makale bulunamadı",
+    "backToBlog": "İçgörülere Dön",
+    "translationNote": "Bu makale henüz dilinizde mevcut değil."
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir şeyler ters gitti",
+    "required": "Zorunlu"
+  }
+}

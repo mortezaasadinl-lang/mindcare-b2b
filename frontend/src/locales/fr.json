@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "solution": "Solution",
+    "howItWorks": "Comment ça marche",
+    "benefits": "Avantages",
+    "team": "Équipe",
+    "faq": "FAQ",
+    "insights": "Perspectives",
+    "contact": "Contact",
+    "requestDemo": "Demander une Démo"
+  },
+  "hero": {
+    "badge1": "Conforme RGPD",
+    "badge2": "Propulsé par l'IA",
+    "title": "Transformez l'évaluation de la santé mentale avec",
+    "titleHighlight": "Précision IA",
+    "subtitle": "PsyTech fournit des insights psychologiques personnalisés, sans biais, conformes au RGPD grâce à l'IA avancée pour les prestataires de soins, institutions et entreprises à travers l'Europe.",
+    "cta1": "Demander une Démo",
+    "cta2": "Découvrir Comment ça Marche",
+    "stat1": "Évaluations Plus Rapides",
+    "stat2": "Taux de Précision",
+    "stat3": "Conforme RGPD"
+  },
+  "problem": {
+    "label": "Le Défi",
+    "title": "Les évaluations psychologiques traditionnelles sont",
+    "titleHighlight": "Obsolètes",
+    "subtitle": "Les méthodes actuelles d'évaluation de la santé mentale présentent des limitations significatives affectant des millions de personnes.",
+    "items": {
+      "scope": { "title": "Portée Limitée", "desc": "Les tests traditionnels ne mesurent que des traits spécifiques, manquant l'image complète." },
+      "errors": { "title": "Erreurs de Notation Manuelles", "desc": "La notation dépendant de l'humain introduit des incohérences." },
+      "personal": { "title": "Manque de Personnalisation", "desc": "Les approches standardisées ne tiennent pas compte des différences individuelles." },
+      "bias": { "title": "Biais Inhérents", "desc": "Les biais culturels, de genre et raciaux mènent à des résultats injustes." },
+      "waiting": { "title": "Longs Délais d'Attente", "desc": "Les systèmes de santé mentale font face à de graves retards." },
+      "inefficient": { "title": "Processus Inefficaces", "desc": "L'administration manuelle crée des goulots d'étranglement." }
+    }
+  },
+  "solution": {
+    "label": "Notre Solution",
+    "title": "Intelligence en Santé Mentale",
+    "titleHighlight": "Propulsée par l'IA",
+    "subtitle": "PsyTech combine l'IA de pointe avec l'expertise en psychologie clinique pour des évaluations plus rapides, plus justes et plus précises.",
+    "items": {
+      "adaptive": { "title": "Évaluations Adaptatives en Temps Réel", "desc": "Notre IA ajuste dynamiquement les questions selon les réponses." },
+      "profiles": { "title": "Profils Analytiques Personnalisés", "desc": "Profils psychologiques complets adaptés aux besoins individuels." },
+      "bias": { "title": "Technologie d'Atténuation des Biais", "desc": "Algorithmes avancés identifiant et réduisant activement les biais." },
+      "insights": { "title": "Insights Actionnables", "desc": "Données psychologiques complexes transformées en insights clairs." }
+    }
+  },
+  "contact": {
+    "label": "Contactez-nous",
+    "title": "Transformons la Santé Mentale",
+    "titleHighlight": "Ensemble",
+    "subtitle": "Prêt à découvrir comment PsyTech peut aider votre organisation? Demandez une démo ou discutez des opportunités de partenariat.",
+    "email": "Écrivez-nous à",
+    "location": "Basé à",
+    "trust": "Fait confiance par des organisations à travers l'Europe",
+    "form": {
+      "name": "Nom Complet",
+      "email": "Adresse E-mail",
+      "phone": "Téléphone (optionnel)",
+      "company": "Entreprise / Organisation",
+      "companyType": "Type d'Organisation",
+      "companyTypePlaceholder": "Sélectionner le type",
+      "message": "Votre Message",
+      "messagePlaceholder": "Parlez-nous de vos besoins...",
+      "submit": "Envoyer le Message",
+      "sending": "Envoi...",
+      "privacy": "En soumettant ce formulaire, vous acceptez notre",
+      "privacyPolicy": "Politique de Confidentialité",
+      "privacyNote": "Nous respectons vos données."
+    },
+    "companyTypes": {
+      "mental_health_clinic": "Clinique de Santé Mentale",
+      "hospital": "Hôpital / Système de Santé",
+      "university": "Université / Institution Éducative",
+      "corporate": "Entreprise",
+      "hr_recruitment": "RH / Recrutement",
+      "research": "Organisation de Recherche",
+      "government": "Gouvernement / Secteur Public",
+      "investor": "Investisseur / VC",
+      "individual": "Individuel",
+      "other": "Autre"
+    },
+    "success": {
+      "title": "Merci!",
+      "message": "Votre message a été reçu. Notre équipe vous contactera sous 24-48 heures.",
+      "another": "Envoyer un Autre Message"
+    }
+  },
+  "footer": {
+    "tagline": "Transformation de l'évaluation de la santé mentale avec précision IA. Construit aux Pays-Bas pour l'Europe.",
+    "gdpr": "Conforme RGPD",
+    "product": "Produit",
+    "company": "Entreprise",
+    "legal": "Juridique",
+    "copyright": "© {{year}} PsyTech. Tous droits réservés.",
+    "dataNotice": "Vos données sont traitées et stockées dans l'UE conformément au RGPD."
+  },
+  "insights": {
+    "title": "Perspectives",
+    "subtitle": "Perspectives d'experts sur l'évaluation IA de la santé mentale et l'innovation clinique.",
+    "search": "Rechercher des articles...",
+    "allTags": "Tous les Sujets",
+    "readMore": "Lire Plus",
+    "readTime": "min de lecture",
+    "noResults": "Aucun article trouvé",
+    "backToBlog": "Retour aux Perspectives",
+    "translationNote": "Cet article n'est pas encore disponible dans votre langue."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "required": "Requis"
+  }
+}

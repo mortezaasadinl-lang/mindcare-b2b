@@ -413,7 +413,7 @@ async def admin_create_post(post: PostCreate, username: str = Depends(verify_adm
     }
     
     await db.posts.insert_one(doc)
-    del doc["_id"] if "_id" in doc else None
+    doc.pop("_id", None)
     
     return PostResponse(**doc)
 

@@ -1,6 +1,7 @@
 import requests
 import sys
 import json
+import base64
 from datetime import datetime
 
 class PsyTechAPITester:
@@ -9,6 +10,8 @@ class PsyTechAPITester:
         self.tests_run = 0
         self.tests_passed = 0
         self.results = []
+        self.admin_auth = None
+        self.created_post_id = None
 
     def run_test(self, name, method, endpoint, expected_status, data=None, headers=None):
         """Run a single API test"""

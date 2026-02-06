@@ -389,6 +389,11 @@ def main():
     tester.test_contact_form_submission()
     tester.test_company_types()
     
+    # New blog functionality tests
+    tester.test_blog_public_endpoints()
+    tester.test_admin_auth_failure()
+    tester.test_admin_endpoints()
+    
     # Print final results
     print("\n" + "=" * 50)
     print(f"📊 Final Results: {tester.tests_passed}/{tester.tests_run} tests passed")

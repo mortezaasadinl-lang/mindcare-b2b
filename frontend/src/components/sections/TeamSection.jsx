@@ -8,6 +8,7 @@ const team = [
     bio: "Leading technical development with deep expertise in artificial intelligence, machine learning, and software engineering. Building the core algorithms powering PsyTech's assessment platform.",
     image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/52rqirnu_Gemini_Generated_Image_n4wx9fn4wx9fn4wx___serialized1.png",
     linkedin: "https://www.linkedin.com/in/meysam-rostami-874b2b212/",
+    imagePosition: "object-center", // Center the AI-generated portrait
   },
   {
     name: "Alale Mehranifar",
@@ -15,13 +16,15 @@ const team = [
     bio: "The visionary behind PsyTech's core concept. Leading company strategy, operations, and business development with a background in Biomedical Engineering and healthcare innovation.",
     image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/ordcfcfr_99336.jpg",
     linkedin: "https://www.linkedin.com/in/alalemehranifar/",
+    imagePosition: "object-top",
   },
   {
     name: "Morteza Asadi",
     role: "Co-founder & Sales Manager",
-    bio: "Driving business development and strategic partnerships with deep expertise in HealthTech sales and market expansion.",
+    bio: "Driving business development and strategic partnerships across the European healthcare market. Expert in client acquisition, commercial growth strategies, and building lasting relationships with key stakeholders in the mental health sector.",
     image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/3uxhzoqp_99336....jpg",
     linkedin: "https://www.linkedin.com/in/mortezaasadi-nl",
+    imagePosition: "object-top",
   },
 ];
 

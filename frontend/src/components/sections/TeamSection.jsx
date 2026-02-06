@@ -6,14 +6,14 @@ const team = [
     name: "Meysam Rostami",
     role: "Co-founder & AI Engineer",
     bio: "Leading technical development with deep expertise in artificial intelligence, machine learning, and software engineering. Building the core algorithms powering PsyTech's assessment platform.",
-    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/ordcfcfr_99336.jpg",
+    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/52rqirnu_Gemini_Generated_Image_n4wx9fn4wx9fn4wx___serialized1.png",
     linkedin: "https://www.linkedin.com/in/meysam-rostami-874b2b212/",
   },
   {
     name: "Alale Mehranifar",
     role: "Co-founder & CEO",
     bio: "The visionary behind PsyTech's core concept. Leading company strategy, operations, and business development with a background in Biomedical Engineering and healthcare innovation.",
-    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/52rqirnu_Gemini_Generated_Image_n4wx9fn4wx9fn4wx___serialized1.png",
+    image: "https://customer-assets.emergentagent.com/job_mentaltech-2/artifacts/ordcfcfr_99336.jpg",
     linkedin: "https://www.linkedin.com/in/alalemehranifar/",
   },
   {

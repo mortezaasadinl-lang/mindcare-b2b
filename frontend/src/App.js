@@ -25,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/insights" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/admin" element={<AdminPage />} />
         </Routes>

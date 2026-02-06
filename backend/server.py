@@ -495,6 +495,24 @@ async def admin_generate_ai_post(background_tasks: BackgroundTasks, username: st
     background_tasks.add_task(generate_ai_post)
     return {"message": "AI post generation started in background"}
 
+@admin_router.get("/scheduler/status")
+async def admin_scheduler_status(username: str = Depends(verify_admin)):
+    """Check scheduler status and next scheduled run"""
+    jobs = scheduler.get_jobs()
+    job_info = []
+    for job in jobs:
+        job_info.append({
+            "id": job.id,
+            "name": job.name,
+            "next_run_time": job.next_run_time.isoformat() if job.next_run_time else None,
+            "trigger": str(job.trigger)
+        })
+    return {
+        "scheduler_running": scheduler.running,
+        "jobs": job_info,
+        "auto_publish_enabled": AUTO_PUBLISH_AI_POSTS
+    }
+
 # ============ AI POST GENERATION ============
 
 async def generate_ai_post():

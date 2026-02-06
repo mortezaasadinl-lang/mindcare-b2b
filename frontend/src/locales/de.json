@@ -7,49 +7,49 @@
     "faq": "FAQ",
     "insights": "Einblicke",
     "contact": "Kontakt",
-    "requestDemo": "Demo Anfordern"
+    "requestDemo": "Demo anfordern"
   },
   "hero": {
     "badge1": "DSGVO-konform",
-    "badge2": "KI-gesteuert",
-    "title": "Transformieren Sie die psychologische Bewertung mit",
+    "badge2": "KI-gestützt",
+    "title": "Psychische Gesundheitsbeurteilung transformieren mit",
     "titleHighlight": "KI-Präzision",
-    "subtitle": "PsyTech liefert personalisierte, bias-reduzierte, DSGVO-konforme psychologische Einblicke mit fortschrittlicher KI für Gesundheitsdienstleister, Institutionen und Unternehmen in ganz Europa.",
-    "cta1": "Demo Anfordern",
-    "cta2": "Erfahren Sie Mehr",
-    "stat1": "Schnellere Bewertungen",
-    "stat2": "Genauigkeit",
+    "subtitle": "PsyTech liefert personalisierte, bias-reduzierte, DSGVO-konforme psychologische Erkenntnisse mit fortschrittlicher KI und adaptiven Tests für Gesundheitsdienstleister, Institutionen und Unternehmen in ganz Europa.",
+    "cta1": "Demo anfordern",
+    "cta2": "Erfahren Sie wie es funktioniert",
+    "stat1": "Schnellere Assessments",
+    "stat2": "Genauigkeitsrate",
     "stat3": "DSGVO-konform"
   },
   "problem": {
     "label": "Die Herausforderung",
-    "title": "Traditionelle psychologische Bewertungen sind",
-    "titleHighlight": "Veraltet",
-    "subtitle": "Aktuelle Methoden zur psychischen Gesundheitsbewertung weisen erhebliche Einschränkungen auf, die Millionen von Menschen betreffen.",
+    "title": "Traditionelle psychologische Assessments sind",
+    "titleHighlight": "veraltet",
+    "subtitle": "Aktuelle Methoden zur Beurteilung der psychischen Gesundheit haben erhebliche Einschränkungen, die Millionen von Menschen betreffen.",
     "items": {
-      "scope": { "title": "Begrenzter Umfang", "desc": "Traditionelle Tests messen nur bestimmte Eigenschaften und verpassen das vollständige Bild." },
-      "errors": { "title": "Manuelle Bewertungsfehler", "desc": "Menschenabhängige Bewertung führt zu Inkonsistenzen und Fehlern." },
-      "personal": { "title": "Mangelnde Personalisierung", "desc": "Einheitsansätze berücksichtigen keine individuellen Unterschiede." },
-      "bias": { "title": "Inhärente Voreingenommenheit", "desc": "Kulturelle, geschlechtliche und rassische Vorurteile führen zu unfairen Ergebnissen." },
-      "waiting": { "title": "Lange Wartezeiten", "desc": "Das Gesundheitssystem kämpft mit schweren Rückständen bei psychologischen Bewertungen." },
-      "inefficient": { "title": "Ineffiziente Prozesse", "desc": "Manuelle Verwaltung und Analyse verzögern kritische Interventionen." }
+      "scope": { "title": "Begrenzter Umfang", "desc": "Traditionelle Tests messen nur spezifische Eigenschaften und verpassen das Gesamtbild des psychologischen Profils." },
+      "errors": { "title": "Manuelle Bewertungsfehler", "desc": "Menschenabhängige Bewertung führt zu Inkonsistenzen und Fehlern, die die Zuverlässigkeit beeinträchtigen." },
+      "personal": { "title": "Mangelnde Personalisierung", "desc": "Einheitsansätze berücksichtigen nicht individuelle Unterschiede und kulturelle Kontexte." },
+      "bias": { "title": "Inhärente Voreingenommenheit", "desc": "Kulturelle, geschlechtsspezifische und rassistische Vorurteile führen zu unfairen und ungenauen Ergebnissen." },
+      "waiting": { "title": "Lange Wartezeiten", "desc": "Patienten warten oft Monate auf psychologische Beurteilungen." },
+      "inefficient": { "title": "Ineffiziente Prozesse", "desc": "Manuelle Administration und Analyse verzögern kritische Interventionen." }
     },
     "stats": {
       "people": "Menschen warten auf psychische Gesundheitsversorgung",
-      "weeks": "Durchschnittliche Wartezeit",
+      "weeks": "Durchschnittliche Wartezeit für Assessment",
       "error": "Fehlerquote bei manueller Bewertung"
     }
   },
   "solution": {
     "label": "Unsere Lösung",
-    "title": "KI-gesteuerte psychische Gesundheits-",
+    "title": "KI-gestützte psychische Gesundheits-",
     "titleHighlight": "Intelligenz",
-    "subtitle": "PsyTech kombiniert modernste KI mit klinischer Psychologie-Expertise für schnellere, fairere und genauere Bewertungen.",
+    "subtitle": "PsyTech kombiniert modernste KI mit klinischer Psychologie-Expertise, um schnellere, fairere und genauere Assessments zu liefern.",
     "items": {
-      "adaptive": { "title": "Adaptive Echtzeit-Bewertungen", "desc": "Unsere KI passt Fragen dynamisch basierend auf Antworten an." },
-      "profiles": { "title": "Personalisierte analytische Profile", "desc": "Umfassende psychologische Profile, angepasst an individuelle Bedürfnisse." },
-      "bias": { "title": "Bias-Minderungstechnologie", "desc": "Fortschrittliche Algorithmen identifizieren und reduzieren aktiv Vorurteile." },
-      "insights": { "title": "Umsetzbare Einblicke", "desc": "Komplexe psychologische Daten in klare, verständliche Einblicke umwandeln." }
+      "adaptive": { "title": "Adaptive Echtzeit-Assessments", "desc": "Unsere KI passt Fragen dynamisch an Antworten an und erstellt personalisierte Assessment-Erfahrungen." },
+      "profiles": { "title": "Personalisierte analytische Profile", "desc": "Erstellen Sie umfassende psychologische Profile, die auf individuelle Bedürfnisse zugeschnitten sind." },
+      "bias": { "title": "Bias-Minderungstechnologie", "desc": "Fortschrittliche Algorithmen erkennen und reduzieren kulturelle und geschlechtsspezifische Vorurteile." },
+      "insights": { "title": "Umsetzbare Erkenntnisse", "desc": "Transformieren Sie komplexe psychologische Daten in klare, verständliche Erkenntnisse." }
     },
     "features": {
       "realtime": "Echtzeit-Datenverarbeitung",
@@ -63,14 +63,116 @@
   "howItWorks": {
     "label": "Der Prozess",
     "title": "So funktioniert PsyTech",
-    "subtitle": "Ein optimierter, vierstufiger Prozess, der komplexe psychologische Bewertungen in umsetzbare Einblicke verwandelt.",
+    "subtitle": "Ein optimierter Vier-Schritte-Prozess, der komplexe psychologische Beurteilungen in Minuten in umsetzbare Erkenntnisse verwandelt.",
     "steps": {
-      "step1": { "title": "Bewertung abschließen", "desc": "Benutzer absolviert adaptive Bewertungen online über unsere Plattform." },
-      "step2": { "title": "KI-Analyse", "desc": "Unsere fortschrittliche KI analysiert Antworten in Echtzeit." },
-      "step3": { "title": "Profilerstellung", "desc": "Das System erstellt ein umfassendes psychologisches Profil." },
-      "step4": { "title": "Umsetzbare Einblicke", "desc": "Fachleute und Benutzer erhalten klare Einblicke für Entscheidungen." }
+      "step1": { "title": "Assessment abschließen", "desc": "Benutzer absolvieren adaptive Assessments online über unsere intuitive Plattform." },
+      "step2": { "title": "KI-Analyse", "desc": "Unsere fortschrittliche KI analysiert Antworten in Echtzeit und identifiziert Muster." },
+      "step3": { "title": "Profilerstellung", "desc": "Das System erstellt ein umfassendes psychologisches Profil mit Empfehlungen." },
+      "step4": { "title": "Umsetzbare Erkenntnisse", "desc": "Fachleute und Benutzer erhalten klare Erkenntnisse für fundierte Entscheidungen." }
     },
     "completion": "Durchschnittliche Bearbeitungszeit:"
+  },
+  "benefits": {
+    "label": "Vorteile",
+    "title": "Psychische Gesundheit transformieren für",
+    "titleHighlight": "Alle",
+    "subtitle": "Ob Sie als Einzelperson Selbsterkenntnis suchen oder als Organisation Ihre Mitarbeiter unterstützen möchten – PsyTech liefert messbaren Wert.",
+    "individuals": {
+      "title": "Für Einzelpersonen",
+      "desc": "Gewinnen Sie tiefere Selbsterkenntnis und treffen Sie fundierte Entscheidungen über Ihre psychische Gesundheit.",
+      "features": ["Personalisierte psychologische Einblicke", "Karriereberatung basierend auf Persönlichkeit", "Empfehlungen für psychisches Wohlbefinden", "Fortschrittsverfolgung"]
+    },
+    "healthcare": {
+      "title": "Für Gesundheitsdienstleister",
+      "desc": "Reduzieren Sie die Assessment-Zeit um 40% bei verbesserter Genauigkeit. Konzentrieren Sie sich auf die Pflege.",
+      "features": ["40% schnellere Assessments", "Reduzierter Verwaltungsaufwand", "Integration in klinische Workflows", "Evidenzbasierte Empfehlungen"]
+    },
+    "education": {
+      "title": "Für Bildungseinrichtungen",
+      "desc": "Unterstützen Sie das Wohlbefinden der Studierenden mit Frühinterventionstools.",
+      "features": ["Frühe psychische Gesundheitsscreenings", "Akademische Eignungsbeurteilung", "Karriereberatungsunterstützung", "Skalierbar für große Studentenzahlen"]
+    },
+    "corporate": {
+      "title": "Für Unternehmen",
+      "desc": "Verbessern Sie Einstellungsentscheidungen und Wohlbefindensprogramme. Bauen Sie stärkere Teams auf.",
+      "features": ["Bias-freies Rekrutierungsscreening", "Teamkompatibilitätsanalyse", "Mitarbeiterwohlbefinden-Monitoring", "Führungspotenzial-Assessment"]
+    }
+  },
+  "usp": {
+    "label": "Warum PsyTech",
+    "title": "Was uns unterscheidet",
+    "subtitle": "PsyTech kombiniert modernste Technologie mit klinischer Expertise für transformative Assessments.",
+    "items": {
+      "ai": { "title": "KI-gestützte Tiefenanalyse", "desc": "Fortschrittliche ML-Algorithmen analysieren Antworten mit beispielloser Tiefe." },
+      "adaptive": { "title": "Personalisierte adaptive Tests", "desc": "Fragen passen sich in Echtzeit an individuelle Antworten an." },
+      "biasFree": { "title": "Bias-freie Assessments", "desc": "Eingebaute Bias-Erkennung gewährleistet faire Ergebnisse." },
+      "realtime": { "title": "Echtzeit-Interpretation", "desc": "Sofortige Analyse – kein wochenlanges Warten auf Ergebnisse." },
+      "scalable": { "title": "Skalierbar B2B & B2C", "desc": "Von individuellen Assessments bis zu unternehmensweiten Implementierungen." },
+      "gdpr": { "title": "DSGVO-konform & sicher", "desc": "Europäische Datenschutzstandards mit End-to-End-Verschlüsselung." }
+    },
+    "trust": {
+      "iso": "ISO 27001 Sicherheitsstandards",
+      "gdpr": "DSGVO-konform",
+      "eu": "EU-Datenresidenz"
+    }
+  },
+  "market": {
+    "label": "Marktfokus",
+    "title": "Entwickelt für das",
+    "titleHighlight": "Europäische Gesundheitswesen",
+    "subtitle": "PsyTech wurde von Grund auf entwickelt, um die einzigartigen Herausforderungen der psychischen Gesundheitssysteme in Europa anzugehen.",
+    "items": {
+      "netherlands": { "title": "Niederlande zuerst", "desc": "In enger Zusammenarbeit mit niederländischen Gesundheitsdienstleistern entwickelt." },
+      "europe": { "title": "Europäische Expansion", "desc": "Skalierbare Plattform für Gesundheitssysteme in der gesamten EU." },
+      "demand": { "title": "Wachsende Nachfrage", "desc": "Bewältigung des Anstiegs psychischer Gesundheitsbedürfnisse." },
+      "waiting": { "title": "Wartelisten reduzieren", "desc": "Speziell entwickelt, um Rückstände in überlasteten Systemen abzubauen." }
+    },
+    "stats": {
+      "market": "EU-Markt für psychische Gesundheit",
+      "growth": "Jährliche Wachstumsrate"
+    }
+  },
+  "impact": {
+    "label": "Unsere Wirkung",
+    "title": "Bedeutsamen Wandel schaffen",
+    "subtitle": "PsyTech engagiert sich für die Transformation der psychischen Gesundheitsversorgung.",
+    "items": {
+      "mental": { "title": "Verbesserung der psychischen Gesundheit", "desc": "Früherkennung und Intervention für psychische Erkrankungen ermöglichen.", "stat": "3x", "statLabel": "Frühere Erkennung" },
+      "decision": { "title": "Bessere Entscheidungsfindung", "desc": "Menschen mit Erkenntnissen für fundierte Entscheidungen ausstatten.", "stat": "85%", "statLabel": "Nutzerzufriedenheit" },
+      "academic": { "title": "Akademische Beratung", "desc": "Studierenden helfen, ihre Stärken zu entdecken.", "stat": "40%", "statLabel": "Bessere Karriere-Matches" },
+      "workforce": { "title": "Workforce-Optimierung", "desc": "Stärkere, resilientere Teams aufbauen.", "stat": "25%", "statLabel": "Reduzierte Fluktuation" },
+      "inclusivity": { "title": "Inklusivität & Zugänglichkeit", "desc": "Qualitäts-Assessments für alle zugänglich machen.", "stat": "100%", "statLabel": "Bias-Minderung" }
+    },
+    "quote": "Unsere Mission ist es, den Zugang zu qualitativ hochwertigen psychologischen Assessments zu demokratisieren.",
+    "quoteAuthor": "— Das PsyTech Team"
+  },
+  "team": {
+    "label": "Unser Team",
+    "title": "Lernen Sie die Gründer kennen",
+    "subtitle": "Ein leidenschaftliches Team, das Expertise in KI, Gesundheitswesen und Geschäftsentwicklung vereint.",
+    "members": {
+      "meysam": { "name": "Meysam Rostami", "role": "Mitgründer & KI-Ingenieur", "bio": "Leitet die technische Entwicklung mit Expertise in künstlicher Intelligenz und maschinellem Lernen." },
+      "alaleh": { "name": "Alale Mehranifar", "role": "Mitgründerin & CEO", "bio": "Die Visionärin hinter dem Kernkonzept von PsyTech. Leitet Unternehmensstrategie und Geschäftsentwicklung." },
+      "morteza": { "name": "Morteza Asadi", "role": "Mitgründer & Sales Manager", "bio": "Treibt Geschäftsentwicklung und strategische Partnerschaften im HealthTech-Bereich voran." }
+    },
+    "credibility": "Unser Team vereint jahrelange Erfahrung in <ai>KI-Forschung</ai>, <psychology>klinischer Psychologie</psychology> und <tech>Gesundheitstechnologie</tech>."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu PsyTechs Plattform und Implementierung.",
+    "items": {
+      "accuracy": { "q": "Wie gewährleistet PsyTech die Genauigkeit von KI-gestützten Assessments?", "a": "Unsere Assessments werden in Zusammenarbeit mit klinischen Psychologen entwickelt und gegen etablierte psychologische Instrumente validiert." },
+      "gdpr": { "q": "Ist PsyTech DSGVO-konform?", "a": "Ja, absolut. PsyTech wurde von Grund auf mit DSGVO-Konformität als Kernanforderung entwickelt." },
+      "duration": { "q": "Wie lange dauert ein typisches Assessment?", "a": "Die meisten PsyTech-Assessments dauern zwischen 15-20 Minuten." },
+      "integration": { "q": "Kann PsyTech in bestehende Gesundheitssysteme integriert werden?", "a": "Ja, PsyTech bietet API-Integrationen für nahtlose Verbindung mit elektronischen Patientenakten." },
+      "types": { "q": "Welche Arten von Assessments bietet PsyTech an?", "a": "PsyTech bietet kognitive Fähigkeitstests, Persönlichkeitsassessments, emotionale Intelligenz-Evaluierungen und Wohlbefinden-Screenings." },
+      "bias": { "q": "Wie geht PsyTech mit Voreingenommenheit in psychologischen Tests um?", "a": "Unsere KI-Modelle sind speziell darauf ausgelegt, kulturelle und geschlechtsspezifische Vorurteile zu erkennen und zu mindern." },
+      "users": { "q": "Ist PsyTech für Einzelpersonen oder nur für Organisationen geeignet?", "a": "PsyTech bedient sowohl B2B- als auch B2C-Märkte." },
+      "support": { "q": "Welche Unterstützung bieten Sie für die Implementierung?", "a": "Wir bieten umfassende Onboarding-Unterstützung einschließlich technischer Integration und Benutzerschulung." }
+    },
+    "moreQuestions": "Noch Fragen?",
+    "contactTeam": "Kontaktieren Sie unser Team"
   },
   "contact": {
     "label": "Kontakt",
@@ -78,8 +180,8 @@
     "titleHighlight": "Gemeinsam",
     "subtitle": "Bereit zu sehen, wie PsyTech Ihrer Organisation helfen kann? Fordern Sie eine Demo an oder besprechen Sie Partnerschaftsmöglichkeiten.",
     "email": "E-Mail an",
-    "location": "Standort",
-    "trust": "Vertraut von Organisationen in ganz Europa",
+    "location": "Sitz in",
+    "trust": "Von Organisationen in ganz Europa vertraut",
     "form": {
       "name": "Vollständiger Name",
       "email": "E-Mail-Adresse",
@@ -88,15 +190,15 @@
       "companyType": "Organisationstyp",
       "companyTypePlaceholder": "Organisationstyp auswählen",
       "message": "Ihre Nachricht",
-      "messagePlaceholder": "Erzählen Sie uns von Ihren Anforderungen...",
-      "submit": "Nachricht Senden",
-      "sending": "Senden...",
-      "privacy": "Mit dem Absenden stimmen Sie unserer",
-      "privacyPolicy": "Datenschutzerklärung",
-      "privacyNote": "zu. Wir respektieren Ihre Daten."
+      "messagePlaceholder": "Erzählen Sie uns von Ihren Bedürfnissen...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "privacy": "Mit dem Absenden dieses Formulars stimmen Sie unserer",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "privacyNote": "Wir respektieren Ihre Daten und teilen sie niemals mit Dritten."
     },
     "companyTypes": {
-      "mental_health_clinic": "Psychiatrische Klinik / Praxis",
+      "mental_health_clinic": "Psychische Gesundheitsklinik / Praxis",
       "hospital": "Krankenhaus / Gesundheitssystem",
       "university": "Universität / Bildungseinrichtung",
       "corporate": "Unternehmen",
@@ -104,37 +206,77 @@
       "research": "Forschungsorganisation",
       "government": "Regierung / Öffentlicher Sektor",
       "investor": "Investor / VC",
-      "individual": "Einzelperson",
-      "other": "Sonstige"
+      "individual": "Einzelperson / Persönliche Nutzung",
+      "other": "Sonstiges"
     },
     "success": {
       "title": "Vielen Dank!",
       "message": "Ihre Nachricht wurde empfangen. Unser Team wird sich innerhalb von 24-48 Stunden bei Ihnen melden.",
-      "another": "Weitere Nachricht Senden"
+      "another": "Weitere Nachricht senden"
     }
   },
   "footer": {
-    "tagline": "Transformation der psychischen Gesundheitsbewertung mit KI-gesteuerter Präzision. In den Niederlanden für Europa entwickelt.",
+    "tagline": "Transformation der psychischen Gesundheitsbeurteilung mit KI-gestützter Präzision und Empathie. In den Niederlanden für Europa entwickelt.",
     "gdpr": "DSGVO-konform",
     "product": "Produkt",
     "company": "Unternehmen",
     "legal": "Rechtliches",
+    "features": "Funktionen",
+    "aboutUs": "Über uns",
+    "careers": "Karriere",
+    "press": "Presse",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "gdprCompliance": "DSGVO-Konformität",
     "copyright": "© {{year}} PsyTech. Alle Rechte vorbehalten.",
-    "dataNotice": "Ihre Daten werden innerhalb der EU gemäß DSGVO verarbeitet und gespeichert."
+    "dataNotice": "Ihre Daten werden innerhalb der Europäischen Union gemäß der DSGVO verarbeitet und gespeichert."
   },
   "insights": {
     "title": "Einblicke",
-    "subtitle": "Expertenperspektiven zu KI-gesteuerter psychischer Gesundheitsbewertung und klinischer Innovation.",
+    "subtitle": "Expertenperspektiven zu KI-gestützter psychischer Gesundheitsbeurteilung und klinischer Innovation.",
     "search": "Artikel suchen...",
     "allTags": "Alle Themen",
-    "readMore": "Mehr Lesen",
+    "readMore": "Weiterlesen",
     "readTime": "Min. Lesezeit",
     "noResults": "Keine Artikel gefunden",
+    "noResultsDesc": "Versuchen Sie, Ihre Such- oder Filterkriterien anzupassen.",
     "backToBlog": "Zurück zu Einblicke",
-    "translationNote": "Dieser Artikel ist noch nicht in Ihrer Sprache verfügbar."
+    "translationNote": "Dieser Artikel ist noch nicht in Ihrer Sprache verfügbar. Englische Version wird angezeigt.",
+    "shareArticle": "Diesen Artikel teilen",
+    "relatedPosts": "Verwandte Artikel",
+    "publishedOn": "Veröffentlicht am"
+  },
+  "admin": {
+    "title": "Admin-Dashboard",
+    "posts": "Beiträge",
+    "createPost": "Beitrag erstellen",
+    "editPost": "Beitrag bearbeiten",
+    "allPosts": "Alle Beiträge",
+    "drafts": "Entwürfe",
+    "published": "Veröffentlicht",
+    "aiGenerated": "KI-generiert",
+    "generateAI": "KI-Beitrag generieren",
+    "generating": "Wird generiert...",
+    "publish": "Veröffentlichen",
+    "unpublish": "Zurückziehen",
+    "delete": "Löschen",
+    "save": "Speichern",
+    "saving": "Wird gespeichert...",
+    "cancel": "Abbrechen",
+    "form": {
+      "title": "Titel",
+      "summary": "Zusammenfassung",
+      "content": "Inhalt (Markdown)",
+      "tags": "Tags (kommagetrennt)",
+      "language": "Sprache",
+      "heroImage": "Hero-Bild-URL",
+      "seoTitle": "SEO-Titel",
+      "seoDescription": "SEO-Beschreibung"
+    }
   },
   "common": {
-    "loading": "Laden...",
+    "loading": "Lädt...",
     "error": "Etwas ist schief gelaufen",
     "required": "Erforderlich"
   }

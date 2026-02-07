@@ -32,6 +32,17 @@ const getSavedLanguage = () => {
 // RTL languages
 const RTL_LANGUAGES = ['fa', 'ar'];
 
+// Available languages with flags
+export const languages = [
+  { code: 'en', name: 'EN', flag: '🇬🇧' },
+  { code: 'nl', name: 'NL', flag: '🇳🇱' },
+  { code: 'de', name: 'DE', flag: '🇩🇪' },
+  { code: 'fr', name: 'FR', flag: '🇫🇷' },
+  { code: 'fa', name: 'FA', flag: '🇮🇷' },
+  { code: 'ar', name: 'AR', flag: '🇸🇦' },
+  { code: 'tr', name: 'TR', flag: '🇹🇷' },
+];
+
 // Function to update document direction
 export const updateDocumentDirection = (lng) => {
   if (typeof document !== 'undefined') {

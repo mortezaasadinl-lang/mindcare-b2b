@@ -1,45 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Heart, Compass, GraduationCap, Users, Globe } from "lucide-react";
 
-const impacts = [
-  {
-    icon: Heart,
-    title: "Mental Health Improvement",
-    description: "Enable early detection and intervention for mental health conditions, improving outcomes for millions.",
-    stat: "3x",
-    statLabel: "Earlier detection",
-  },
-  {
-    icon: Compass,
-    title: "Better Decision Making",
-    description: "Empower individuals with insights to make informed personal and career decisions.",
-    stat: "85%",
-    statLabel: "User satisfaction",
-  },
-  {
-    icon: GraduationCap,
-    title: "Academic Guidance",
-    description: "Help students discover their strengths and find the right academic and career paths.",
-    stat: "40%",
-    statLabel: "Better career matches",
-  },
-  {
-    icon: Users,
-    title: "Workforce Optimization",
-    description: "Build stronger, more resilient teams with data-driven hiring and development insights.",
-    stat: "25%",
-    statLabel: "Reduced turnover",
-  },
-  {
-    icon: Globe,
-    title: "Inclusivity & Accessibility",
-    description: "Make quality psychological assessment accessible to everyone, regardless of location or background.",
-    stat: "100%",
-    statLabel: "Bias mitigation",
-  },
-];
-
 export default function ImpactSection() {
+  const { t } = useTranslation();
+
+  const impacts = [
+    { icon: Heart, key: "mental" },
+    { icon: Compass, key: "decision" },
+    { icon: GraduationCap, key: "academic" },
+    { icon: Users, key: "workforce" },
+    { icon: Globe, key: "inclusivity" },
+  ];
+
   return (
     <section
       id="impact"
@@ -50,17 +23,16 @@ export default function ImpactSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-700 mb-4">
-            Our Impact
+            {t('impact.label')}
           </p>
           <h2
             data-testid="impact-headline"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
           >
-            Creating Meaningful Change
+            {t('impact.title')}
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            PsyTech is committed to transforming how mental health is understood and supported,
-            creating positive impact across individuals, organizations, and society.
+            {t('impact.subtitle')}
           </p>
         </div>
 
@@ -80,18 +52,18 @@ export default function ImpactSection() {
                 </div>
                 <div className="text-right">
                   <p className="text-3xl font-bold text-cyan-700 font-['Plus_Jakarta_Sans']">
-                    {impact.stat}
+                    {t(`impact.items.${impact.key}.stat`)}
                   </p>
                   <p className="text-xs text-slate-500 uppercase tracking-wide">
-                    {impact.statLabel}
+                    {t(`impact.items.${impact.key}.statLabel`)}
                   </p>
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-3">
-                {impact.title}
+                {t(`impact.items.${impact.key}.title`)}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                {impact.description}
+                {t(`impact.items.${impact.key}.desc`)}
               </p>
             </div>
           ))}
@@ -100,10 +72,9 @@ export default function ImpactSection() {
         {/* Mission statement */}
         <div className="mt-16 text-center">
           <blockquote className="text-xl md:text-2xl text-slate-700 font-medium italic max-w-4xl mx-auto">
-            "Our mission is to democratize access to quality psychological assessment,
-            making mental health support available to everyone who needs it."
+            "{t('impact.quote')}"
           </blockquote>
-          <p className="mt-4 text-slate-500">— The PsyTech Team</p>
+          <p className="mt-4 text-slate-500">{t('impact.quoteAuthor')}</p>
         </div>
       </div>
     </section>

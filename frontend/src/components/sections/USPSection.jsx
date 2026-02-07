@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { 
   Brain, 
   Fingerprint, 
@@ -9,40 +10,18 @@ import {
   CheckCircle 
 } from "lucide-react";
 
-const usps = [
-  {
-    icon: Brain,
-    title: "AI-Powered Deep Analysis",
-    description: "Advanced machine learning algorithms analyze responses at a depth impossible for traditional methods.",
-  },
-  {
-    icon: Fingerprint,
-    title: "Personalized Adaptive Testing",
-    description: "Questions adapt in real-time based on individual responses, creating a unique assessment experience.",
-  },
-  {
-    icon: Scale,
-    title: "Bias-Free Assessments",
-    description: "Built-in bias detection and mitigation ensures fair results regardless of background.",
-  },
-  {
-    icon: Zap,
-    title: "Real-Time Interpretation",
-    description: "Instant analysis and insights delivery—no waiting days or weeks for results.",
-  },
-  {
-    icon: Shield,
-    title: "Scalable B2B & B2C",
-    description: "From individual assessments to enterprise-wide deployments, PsyTech scales seamlessly.",
-  },
-  {
-    icon: Lock,
-    title: "GDPR Compliant & Secure",
-    description: "European data protection standards with end-to-end encryption and data sovereignty.",
-  },
-];
-
 export default function USPSection() {
+  const { t } = useTranslation();
+
+  const usps = [
+    { icon: Brain, key: "ai" },
+    { icon: Fingerprint, key: "adaptive" },
+    { icon: Scale, key: "biasFree" },
+    { icon: Zap, key: "realtime" },
+    { icon: Shield, key: "scalable" },
+    { icon: Lock, key: "gdpr" },
+  ];
+
   return (
     <section
       id="usp"
@@ -53,17 +32,16 @@ export default function USPSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400 mb-4">
-            Why PsyTech
+            {t('usp.label')}
           </p>
           <h2
             data-testid="usp-headline"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
           >
-            What Sets Us Apart
+            {t('usp.title')}
           </h2>
           <p className="text-lg text-slate-400 leading-relaxed">
-            PsyTech combines cutting-edge technology with clinical expertise to deliver
-            assessments that are transforming the mental health industry.
+            {t('usp.subtitle')}
           </p>
         </div>
 
@@ -79,10 +57,10 @@ export default function USPSection() {
                 <usp.icon className="w-7 h-7 text-cyan-400" />
               </div>
               <h3 className="text-xl font-semibold text-white font-['Plus_Jakarta_Sans'] mb-3">
-                {usp.title}
+                {t(`usp.items.${usp.key}.title`)}
               </h3>
               <p className="text-slate-400 leading-relaxed">
-                {usp.description}
+                {t(`usp.items.${usp.key}.desc`)}
               </p>
             </div>
           ))}
@@ -92,15 +70,15 @@ export default function USPSection() {
         <div className="mt-16 flex flex-wrap justify-center gap-8">
           <div className="flex items-center gap-3 text-slate-400">
             <CheckCircle className="w-5 h-5 text-green-400" />
-            <span>ISO 27001 Security Standards</span>
+            <span>{t('usp.trust.iso')}</span>
           </div>
           <div className="flex items-center gap-3 text-slate-400">
             <CheckCircle className="w-5 h-5 text-green-400" />
-            <span>GDPR Compliant</span>
+            <span>{t('usp.trust.gdpr')}</span>
           </div>
           <div className="flex items-center gap-3 text-slate-400">
             <CheckCircle className="w-5 h-5 text-green-400" />
-            <span>EU Data Residency</span>
+            <span>{t('usp.trust.eu')}</span>
           </div>
         </div>
       </div>

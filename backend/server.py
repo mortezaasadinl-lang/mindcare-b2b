@@ -168,10 +168,15 @@ async def send_to_make_webhook(post_data: dict):
         logger.warning("MAKE_WEBHOOK_URL not configured, skipping webhook")
         return False
     
+    # Build post URL - use FRONTEND_URL if available, otherwise skip URL field
+    post_url = None
+    if FRONTEND_URL:
+        post_url = f"{FRONTEND_URL}/blog/{post_data.get('slug')}"
+    
     payload = {
         "title": post_data.get("title"),
         "excerpt": post_data.get("summary"),
-        "url": f"{FRONTEND_URL}/blog/{post_data.get('slug')}",
+        "url": post_url,
         "image_url": post_data.get("hero_image"),
         "tags": post_data.get("tags", []),
         "language": post_data.get("language"),

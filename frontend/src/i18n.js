@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// Import translation files
 import en from './locales/en.json';
 import nl from './locales/nl.json';
 import de from './locales/de.json';
@@ -17,7 +18,34 @@ const resources = {
   fr: { translation: fr },
   fa: { translation: fa },
   ar: { translation: ar },
-  tr: { translation: tr }
+  tr: { translation: tr },
+};
+
+// Get saved language from localStorage or detect
+const getSavedLanguage = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('i18nextLng') || 'en';
+  }
+  return 'en';
+};
+
+// RTL languages
+const RTL_LANGUAGES = ['fa', 'ar'];
+
+// Function to update document direction
+export const updateDocumentDirection = (lng) => {
+  if (typeof document !== 'undefined') {
+    const isRTL = RTL_LANGUAGES.includes(lng);
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+    document.documentElement.lang = lng;
+    
+    // Add/remove RTL class for additional styling
+    if (isRTL) {
+      document.documentElement.classList.add('rtl');
+    } else {
+      document.documentElement.classList.remove('rtl');
+    }
+  }
 };
 
 i18n
@@ -26,26 +54,36 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    supportedLngs: ['en', 'nl', 'de', 'fr', 'fa', 'ar', 'tr'],
+    lng: getSavedLanguage(),
+    
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'navigator'],
+      lookupLocalStorage: 'i18nextLng',
       caches: ['localStorage'],
     },
+
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false, // React already safes from XSS
+    },
+
+    react: {
+      useSuspense: false,
+    },
   });
 
-export const languages = [
-  { code: 'en', name: 'EN', flag: '🇬🇧', dir: 'ltr' },
-  { code: 'nl', name: 'NL', flag: '🇳🇱', dir: 'ltr' },
-  { code: 'de', name: 'DE', flag: '🇩🇪', dir: 'ltr' },
-  { code: 'fr', name: 'FR', flag: '🇫🇷', dir: 'ltr' },
-  { code: 'fa', name: 'FA', flag: '🇮🇷', dir: 'rtl' },
-  { code: 'ar', name: 'AR', flag: '🇸🇦', dir: 'rtl' },
-  { code: 'tr', name: 'TR', flag: '🇹🇷', dir: 'ltr' }
-];
+// Set initial direction
+updateDocumentDirection(i18n.language);
 
-export const isRTL = (lang) => ['fa', 'ar'].includes(lang);
+// Listen for language changes and update direction
+i18n.on('languageChanged', (lng) => {
+  updateDocumentDirection(lng);
+  // Persist to localStorage
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('i18nextLng', lng);
+  }
+});
+
+// Helper to check if current language is RTL
+export const isRTL = (lang) => RTL_LANGUAGES.includes(lang || i18n.language);
 
 export default i18n;

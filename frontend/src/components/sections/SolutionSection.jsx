@@ -1,39 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Brain, Sparkles, Shield, BarChart3, CheckCircle2 } from "lucide-react";
 
-const solutions = [
-  {
-    icon: Brain,
-    title: "Adaptive Real-time Assessments",
-    description: "Our AI dynamically adjusts questions based on responses, creating a personalized assessment journey that captures nuanced psychological insights.",
-  },
-  {
-    icon: Sparkles,
-    title: "Personalized Analytical Profiles",
-    description: "Generate comprehensive psychological profiles tailored to individual needs, cultural contexts, and specific use cases.",
-  },
-  {
-    icon: Shield,
-    title: "Bias Mitigation Technology",
-    description: "Advanced algorithms actively identify and reduce cultural, gender, and racial biases in assessments for fair, accurate results.",
-  },
-  {
-    icon: BarChart3,
-    title: "Actionable Insights",
-    description: "Transform complex psychological data into clear, easy-to-understand insights that drive meaningful decisions and interventions.",
-  },
-];
-
-const features = [
-  "Real-time data processing",
-  "Multilingual support",
-  "Clinical-grade accuracy",
-  "GDPR-compliant storage",
-  "Seamless integration",
-  "Continuous learning AI",
-];
-
 export default function SolutionSection() {
+  const { t } = useTranslation();
+
+  const solutions = [
+    { icon: Brain, key: "adaptive" },
+    { icon: Sparkles, key: "profiles" },
+    { icon: Shield, key: "bias" },
+    { icon: BarChart3, key: "insights" },
+  ];
+
+  const featureKeys = ["realtime", "multilingual", "clinical", "gdpr", "integration", "learning"];
+
   return (
     <section
       id="solution"
@@ -45,19 +25,17 @@ export default function SolutionSection() {
           {/* Content */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-cyan-700 mb-4">
-              Our Solution
+              {t('solution.label')}
             </p>
             <h2
               data-testid="solution-headline"
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
             >
-              AI-Powered Mental Health{" "}
-              <span className="text-cyan-700">Intelligence</span>
+              {t('solution.title')}{" "}
+              <span className="text-cyan-700">{t('solution.titleHighlight')}</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              PsyTech combines cutting-edge artificial intelligence with clinical psychology
-              expertise to deliver assessments that are faster, fairer, and more accurate
-              than traditional methods.
+              {t('solution.subtitle')}
             </p>
 
             {/* Solution cards */}
@@ -73,10 +51,10 @@ export default function SolutionSection() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
-                      {solution.title}
+                      {t(`solution.items.${solution.key}.title`)}
                     </h3>
                     <p className="text-slate-600">
-                      {solution.description}
+                      {t(`solution.items.${solution.key}.desc`)}
                     </p>
                   </div>
                 </div>
@@ -122,13 +100,13 @@ export default function SolutionSection() {
                   <div className="pt-4 border-t border-slate-100">
                     <p className="text-sm text-slate-500 mb-3">Key Features</p>
                     <div className="flex flex-wrap gap-2">
-                      {features.map((feature, index) => (
+                      {featureKeys.map((key) => (
                         <span
-                          key={index}
+                          key={key}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-50 text-cyan-700 rounded-full text-sm"
                         >
                           <CheckCircle2 className="w-3.5 h-3.5" />
-                          {feature}
+                          {t(`solution.features.${key}`)}
                         </span>
                       ))}
                     </div>

@@ -1,38 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { ClipboardCheck, Cpu, FileText, Lightbulb, ArrowRight } from "lucide-react";
 
-const steps = [
-  {
-    number: "01",
-    icon: ClipboardCheck,
-    title: "Complete Assessment",
-    description: "User completes adaptive assessments online through our intuitive platform. Questions dynamically adjust based on responses.",
-    color: "cyan",
-  },
-  {
-    number: "02",
-    icon: Cpu,
-    title: "AI Analysis",
-    description: "Our advanced AI analyzes responses in real-time, identifying patterns and generating insights with clinical-grade accuracy.",
-    color: "cyan",
-  },
-  {
-    number: "03",
-    icon: FileText,
-    title: "Profile Generation",
-    description: "The system generates a comprehensive psychological profile, highlighting strengths, areas for development, and recommendations.",
-    color: "cyan",
-  },
-  {
-    number: "04",
-    icon: Lightbulb,
-    title: "Actionable Insights",
-    description: "Professionals and users receive clear, actionable insights to make informed decisions about mental health and wellbeing.",
-    color: "cyan",
-  },
-];
-
 export default function HowItWorksSection() {
+  const { t } = useTranslation();
+
+  const steps = [
+    { number: "01", icon: ClipboardCheck, key: "step1" },
+    { number: "02", icon: Cpu, key: "step2" },
+    { number: "03", icon: FileText, key: "step3" },
+    { number: "04", icon: Lightbulb, key: "step4" },
+  ];
+
   return (
     <section
       id="how-it-works"
@@ -43,17 +22,16 @@ export default function HowItWorksSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-700 mb-4">
-            The Process
+            {t('howItWorks.label')}
           </p>
           <h2
             data-testid="how-it-works-headline"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
           >
-            How PsyTech Works
+            {t('howItWorks.title')}
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            A streamlined, four-step process that transforms complex psychological assessment
-            into actionable insights within minutes.
+            {t('howItWorks.subtitle')}
           </p>
         </div>
 
@@ -77,10 +55,10 @@ export default function HowItWorksSection() {
 
                 {/* Content */}
                 <h3 className="text-xl font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-3 relative z-10">
-                  {step.title}
+                  {t(`howItWorks.steps.${step.key}.title`)}
                 </h3>
                 <p className="text-slate-600 leading-relaxed relative z-10">
-                  {step.description}
+                  {t(`howItWorks.steps.${step.key}.desc`)}
                 </p>
               </div>
 
@@ -99,7 +77,7 @@ export default function HowItWorksSection() {
           <div className="inline-flex items-center gap-4 bg-white rounded-full px-6 py-3 border border-slate-200 shadow-sm">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm text-slate-600">Average completion time:</span>
+              <span className="text-sm text-slate-600">{t('howItWorks.completion')}</span>
             </div>
             <span className="text-sm font-semibold text-slate-900">15-20 minutes</span>
           </div>

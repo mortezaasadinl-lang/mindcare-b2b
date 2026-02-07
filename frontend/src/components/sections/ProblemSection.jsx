@@ -1,40 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { AlertTriangle, Clock, Target, Users, Calculator, Ban } from "lucide-react";
 
-const problems = [
-  {
-    icon: Target,
-    title: "Limited Scope",
-    description: "Traditional tests measure only specific traits, missing the full picture of an individual's psychological profile.",
-  },
-  {
-    icon: Calculator,
-    title: "Manual Scoring Errors",
-    description: "Human-dependent scoring introduces inconsistencies and errors that affect assessment reliability.",
-  },
-  {
-    icon: Users,
-    title: "Lack of Personalization",
-    description: "One-size-fits-all approaches fail to account for individual differences and cultural contexts.",
-  },
-  {
-    icon: Ban,
-    title: "Inherent Bias",
-    description: "Cultural, gender, and racial biases in traditional assessments lead to unfair and inaccurate results.",
-  },
-  {
-    icon: Clock,
-    title: "Long Waiting Times",
-    description: "The Dutch mental health system faces severe backlogs, with patients waiting months for assessments.",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Inefficient Processes",
-    description: "Manual administration and analysis create bottlenecks that delay critical mental health interventions.",
-  },
-];
-
 export default function ProblemSection() {
+  const { t } = useTranslation();
+
+  const problems = [
+    { icon: Target, key: "scope" },
+    { icon: Calculator, key: "errors" },
+    { icon: Users, key: "personal" },
+    { icon: Ban, key: "bias" },
+    { icon: Clock, key: "waiting" },
+    { icon: AlertTriangle, key: "inefficient" },
+  ];
+
   return (
     <section
       id="problem"
@@ -45,18 +24,17 @@ export default function ProblemSection() {
         {/* Section header */}
         <div className="max-w-3xl mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-700 mb-4">
-            The Challenge
+            {t('problem.label')}
           </p>
           <h2
             data-testid="problem-headline"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
           >
-            Traditional Psychological Assessments Are{" "}
-            <span className="text-cyan-700">Broken</span>
+            {t('problem.title')}{" "}
+            <span className="text-cyan-700">{t('problem.titleHighlight')}</span>
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Current mental health assessment methods face significant limitations that affect
-            millions of individuals seeking proper psychological evaluation and support.
+            {t('problem.subtitle')}
           </p>
         </div>
 
@@ -72,10 +50,10 @@ export default function ProblemSection() {
                 <problem.icon className="w-7 h-7 text-red-500" />
               </div>
               <h3 className="text-xl font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-3">
-                {problem.title}
+                {t(`problem.items.${problem.key}.title`)}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                {problem.description}
+                {t(`problem.items.${problem.key}.desc`)}
               </p>
             </div>
           ))}
@@ -89,7 +67,7 @@ export default function ProblemSection() {
                 1.3M+
               </p>
               <p className="text-slate-400 mt-2">
-                People waiting for mental health care in Netherlands
+                {t('problem.stats.people')}
               </p>
             </div>
             <div>
@@ -97,7 +75,7 @@ export default function ProblemSection() {
                 14 weeks
               </p>
               <p className="text-slate-400 mt-2">
-                Average waiting time for psychological assessment
+                {t('problem.stats.weeks')}
               </p>
             </div>
             <div>
@@ -105,7 +83,7 @@ export default function ProblemSection() {
                 30%
               </p>
               <p className="text-slate-400 mt-2">
-                Error rate in manual scoring processes
+                {t('problem.stats.error')}
               </p>
             </div>
           </div>

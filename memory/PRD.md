@@ -51,9 +51,13 @@ Build a professional, modern, high-trust website for PsyTech - an AI-driven ment
 ### Phase 5: Multilingual Support (Complete - Feb 2026)
 - 7 languages: English, Dutch, German, French, Persian, Arabic, Turkish
 - Language selector in navbar with flags (persisted in localStorage)
-- RTL support for Persian (fa) and Arabic (ar)
+- RTL support for Persian (fa) and Arabic (ar) - automatically sets `dir="rtl"`
 - Browser language detection with English fallback
-- **Full translations** in /frontend/src/locales/*.json for all sections
+- **Full translations** in /frontend/src/locales/*.json for ALL sections:
+  - Hero, Problem, Solution, How It Works, Benefits, USP, Market, Impact, Team, FAQ, Contact, Footer
+  - Blog page UI, Admin panel labels
+- All components use `useTranslation()` hook - ZERO hardcoded text
+- Language change updates entire site instantly without page refresh
 
 ### Phase 6: Automated Content Schedule (Complete - Feb 2026)
 - APScheduler cron job running on Monday & Thursday at 10:00 CET (9:00 UTC)

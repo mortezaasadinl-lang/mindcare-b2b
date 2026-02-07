@@ -26,15 +26,17 @@ load_dotenv(ROOT_DIR / '.env')
 
 # Resend configuration
 resend.api_key = os.environ.get('RESEND_API_KEY')
-SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
-NOTIFICATION_EMAIL = os.environ.get('NOTIFICATION_EMAIL', 'info@psy-tech.nl')
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
+NOTIFICATION_EMAIL = os.environ.get('NOTIFICATION_EMAIL')
 
 # Make.com webhook for Buffer integration
 MAKE_WEBHOOK_URL = os.environ.get('MAKE_WEBHOOK_URL')
-FRONTEND_URL = os.environ.get('FRONTEND_URL', 'https://psy-tech.nl')
+FRONTEND_URL = os.environ.get('FRONTEND_URL')
 
-# Admin password
-ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'psytech2026')
+# Admin password (required)
+ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD')
+if not ADMIN_PASSWORD:
+    raise ValueError("ADMIN_PASSWORD environment variable is required")
 
 # AI config
 AUTO_PUBLISH_AI_POSTS = os.environ.get('AUTO_PUBLISH_AI_POSTS', 'false').lower() == 'true'

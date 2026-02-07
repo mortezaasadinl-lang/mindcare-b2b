@@ -1,28 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Brain, Linkedin, Instagram, Mail, Shield } from "lucide-react";
 
-const footerLinks = {
-  product: [
-    { name: "Features", href: "#solution" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "FAQ", href: "#faq" },
-  ],
-  company: [
-    { name: "About Us", href: "#team" },
-    { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Contact", href: "#contact" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "GDPR Compliance", href: "#" },
-  ],
-};
-
 export default function Footer() {
+  const { t } = useTranslation();
+
   const scrollToSection = (href) => {
     if (href.startsWith("#")) {
       const element = document.querySelector(href);
@@ -31,6 +13,27 @@ export default function Footer() {
       }
     }
   };
+
+  const productLinks = [
+    { key: "features", href: "#solution" },
+    { key: "howItWorks", href: "#how-it-works" },
+    { key: "benefits", href: "#benefits" },
+    { key: "faq", href: "#faq" },
+  ];
+
+  const companyLinks = [
+    { key: "aboutUs", href: "#team" },
+    { key: "careers", href: "#" },
+    { key: "press", href: "#" },
+    { key: "contact", href: "#contact" },
+  ];
+
+  const legalLinks = [
+    { key: "privacyPolicy", href: "#" },
+    { key: "terms", href: "#" },
+    { key: "cookies", href: "#" },
+    { key: "gdprCompliance", href: "#" },
+  ];
 
   return (
     <footer
@@ -51,28 +54,27 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-slate-400 leading-relaxed mb-6 max-w-sm">
-              Transforming mental health assessment with AI-driven precision and empathy.
-              Built in the Netherlands for Europe and beyond.
+              {t('footer.tagline')}
             </p>
             
             {/* GDPR badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 rounded-full text-sm">
               <Shield className="w-4 h-4 text-green-400" />
-              <span className="text-slate-300">GDPR Compliant</span>
+              <span className="text-slate-300">{t('footer.gdpr')}</span>
             </div>
           </div>
 
           {/* Product links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 font-['Plus_Jakarta_Sans']">Product</h4>
+            <h4 className="text-white font-semibold mb-4 font-['Plus_Jakarta_Sans']">{t('footer.product')}</h4>
             <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.name}>
+              {productLinks.map((link) => (
+                <li key={link.key}>
                   <button
                     onClick={() => scrollToSection(link.href)}
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
-                    {link.name}
+                    {t(`footer.${link.key}`)}
                   </button>
                 </li>
               ))}
@@ -81,15 +83,15 @@ export default function Footer() {
 
           {/* Company links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 font-['Plus_Jakarta_Sans']">Company</h4>
+            <h4 className="text-white font-semibold mb-4 font-['Plus_Jakarta_Sans']">{t('footer.company')}</h4>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
+              {companyLinks.map((link) => (
+                <li key={link.key}>
                   <button
                     onClick={() => scrollToSection(link.href)}
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
-                    {link.name}
+                    {t(`footer.${link.key}`)}
                   </button>
                 </li>
               ))}
@@ -98,15 +100,15 @@ export default function Footer() {
 
           {/* Legal links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 font-['Plus_Jakarta_Sans']">Legal</h4>
+            <h4 className="text-white font-semibold mb-4 font-['Plus_Jakarta_Sans']">{t('footer.legal')}</h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
+              {legalLinks.map((link) => (
+                <li key={link.key}>
                   <a
                     href={link.href}
                     className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
-                    {link.name}
+                    {t(`footer.${link.key}`)}
                   </a>
                 </li>
               ))}
@@ -117,7 +119,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} PsyTech. All rights reserved.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
 
           {/* Social links */}
@@ -153,8 +155,7 @@ export default function Footer() {
         {/* EU Data notice */}
         <div className="mt-8 text-center">
           <p className="text-xs text-slate-600">
-            Your data is processed and stored within the European Union in compliance with GDPR.
-            PsyTech is committed to protecting your privacy and personal information.
+            {t('footer.dataNotice')}
           </p>
         </div>
       </div>

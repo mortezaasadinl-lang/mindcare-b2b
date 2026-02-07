@@ -1,7 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Globe2, MapPin, TrendingUp, Users } from "lucide-react";
 
 export default function MarketFocusSection() {
+  const { t } = useTranslation();
+
+  const items = [
+    { icon: MapPin, key: "netherlands" },
+    { icon: Globe2, key: "europe" },
+    { icon: TrendingUp, key: "demand" },
+    { icon: Users, key: "waiting" },
+  ];
+
   return (
     <section
       id="market"
@@ -13,80 +23,35 @@ export default function MarketFocusSection() {
           {/* Content */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-cyan-700 mb-4">
-              Market Focus
+              {t('market.label')}
             </p>
             <h2
               data-testid="market-headline"
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
             >
-              Designed for{" "}
-              <span className="text-cyan-700">European Healthcare</span>
+              {t('market.title')}{" "}
+              <span className="text-cyan-700">{t('market.titleHighlight')}</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              PsyTech is built from the ground up to address the unique challenges facing
-              mental health systems in the Netherlands and across Europe.
+              {t('market.subtitle')}
             </p>
 
             <div className="space-y-6">
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-cyan-700" />
+              {items.map((item, index) => (
+                <div key={index} className="flex gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
+                    <item.icon className="w-6 h-6 text-cyan-700" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
+                      {t(`market.items.${item.key}.title`)}
+                    </h3>
+                    <p className="text-slate-600">
+                      {t(`market.items.${item.key}.desc`)}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
-                    Netherlands First
-                  </h3>
-                  <p className="text-slate-600">
-                    Developed in close collaboration with Dutch healthcare providers and tailored
-                    to local regulatory requirements.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
-                  <Globe2 className="w-6 h-6 text-cyan-700" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
-                    European Expansion
-                  </h3>
-                  <p className="text-slate-600">
-                    Scalable platform ready to serve healthcare systems across the EU with
-                    full GDPR compliance and multilingual support.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-cyan-700" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
-                    Growing Mental Health Demand
-                  </h3>
-                  <p className="text-slate-600">
-                    Addressing the surge in mental health needs accelerated by the pandemic
-                    and modern workplace pressures.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
-                  <Users className="w-6 h-6 text-cyan-700" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 font-['Plus_Jakarta_Sans'] mb-1">
-                    Reducing Waiting Lists
-                  </h3>
-                  <p className="text-slate-600">
-                    Designed specifically to help clear the backlog of patients waiting for
-                    psychological assessments in overburdened systems.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -144,11 +109,11 @@ export default function MarketFocusSection() {
               <div className="grid grid-cols-2 gap-6 text-center">
                 <div>
                   <p className="text-3xl font-bold text-cyan-700 font-['Plus_Jakarta_Sans']">€89B</p>
-                  <p className="text-sm text-slate-500">EU Mental Health Market</p>
+                  <p className="text-sm text-slate-500">{t('market.stats.market')}</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-cyan-700 font-['Plus_Jakarta_Sans']">12%</p>
-                  <p className="text-sm text-slate-500">Annual Growth Rate</p>
+                  <p className="text-sm text-slate-500">{t('market.stats.growth')}</p>
                 </div>
               </div>
             </div>

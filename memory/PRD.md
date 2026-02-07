@@ -73,15 +73,24 @@ Build a professional, modern, high-trust website for PsyTech - an AI-driven ment
 
 ## Environment Variables
 ```
-MONGO_URL="mongodb://localhost:27017"
+MONGO_URL="mongodb://localhost:27017"  # Auto-migrated to Atlas in deployment
 DB_NAME="test_database"
 CORS_ORIGINS="*"
 RESEND_API_KEY=re_***
+SENDER_EMAIL=onboarding@resend.dev
+NOTIFICATION_EMAIL=info@psy-tech.nl
 EMERGENT_LLM_KEY=sk-emergent-***
 MAKE_WEBHOOK_URL=https://hook.eu1.make.com/***
+FRONTEND_URL=https://psy-tech.nl  # Set to deployment URL in production
 AUTO_PUBLISH_AI_POSTS=true
-ADMIN_PASSWORD=psytech2026
+ADMIN_PASSWORD=psytech2026  # REQUIRED - no fallback
 ```
+
+## Deployment Notes (Feb 2026)
+- Removed hardcoded fallback values for security
+- ADMIN_PASSWORD is now required (no fallback)
+- FRONTEND_URL, SENDER_EMAIL, NOTIFICATION_EMAIL read from env vars only
+- MongoDB migrates automatically to Emergent-managed Atlas
 
 ## Test Results (Feb 2026)
 - Backend: 100% (19/19 tests - iteration 3)

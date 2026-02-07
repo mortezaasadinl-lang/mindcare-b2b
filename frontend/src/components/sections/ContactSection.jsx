@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,20 +18,8 @@ import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-const companyTypes = [
-  { value: "mental_health_clinic", label: "Mental Health Clinic / Practice" },
-  { value: "hospital", label: "Hospital / Healthcare System" },
-  { value: "university", label: "University / Educational Institution" },
-  { value: "corporate", label: "Corporation / Enterprise" },
-  { value: "hr_recruitment", label: "HR / Recruitment Agency" },
-  { value: "research", label: "Research Organization" },
-  { value: "government", label: "Government / Public Sector" },
-  { value: "investor", label: "Investor / VC" },
-  { value: "individual", label: "Individual / Personal Use" },
-  { value: "other", label: "Other" },
-];
-
 export default function ContactSection() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,6 +30,19 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const companyTypeKeys = [
+    "mental_health_clinic",
+    "hospital",
+    "university",
+    "corporate",
+    "hr_recruitment",
+    "research",
+    "government",
+    "investor",
+    "individual",
+    "other",
+  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,7 +57,7 @@ export default function ContactSection() {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.company_type || !formData.message) {
-      toast.error("Please fill in all required fields");
+      toast.error(t('common.required'));
       return;
     }
 
@@ -64,10 +66,10 @@ export default function ContactSection() {
     try {
       await axios.post(`${API}/contact`, formData);
       setIsSubmitted(true);
-      toast.success("Thank you! We'll be in touch soon.");
+      toast.success(t('contact.success.title'));
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Something went wrong. Please try again.");
+      toast.error(t('common.error'));
     } finally {
       setIsSubmitting(false);
     }
@@ -85,10 +87,10 @@ export default function ContactSection() {
             <CheckCircle className="w-10 h-10 text-green-600" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] mb-4">
-            Thank You!
+            {t('contact.success.title')}
           </h2>
           <p className="text-lg text-slate-600 mb-8">
-            Your message has been received. Our team will review your inquiry and get back to you within 24-48 hours.
+            {t('contact.success.message')}
           </p>
           <Button
             onClick={() => {
@@ -105,7 +107,7 @@ export default function ContactSection() {
             variant="outline"
             className="rounded-full"
           >
-            Send Another Message
+            {t('contact.success.another')}
           </Button>
         </div>
       </section>
@@ -123,18 +125,17 @@ export default function ContactSection() {
           {/* Content */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-cyan-700 mb-4">
-              Get in Touch
+              {t('contact.label')}
             </p>
             <h2
               data-testid="contact-headline"
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight mb-6"
             >
-              Let's Transform Mental Health{" "}
-              <span className="text-cyan-700">Together</span>
+              {t('contact.title')}{" "}
+              <span className="text-cyan-700">{t('contact.titleHighlight')}</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              Ready to see how PsyTech can benefit your organization? Request a demo,
-              discuss partnership opportunities, or join our pilot program.
+              {t('contact.subtitle')}
             </p>
 
             {/* Contact options */}
@@ -144,7 +145,7 @@ export default function ContactSection() {
                   <Mail className="w-6 h-6 text-cyan-700" />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500">Email us at</p>
+                  <p className="text-sm text-slate-500">{t('contact.email')}</p>
                   <p className="font-semibold text-slate-900">info@psy-tech.nl</p>
                 </div>
               </div>
@@ -154,7 +155,7 @@ export default function ContactSection() {
                   <Building2 className="w-6 h-6 text-cyan-700" />
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500">Based in</p>
+                  <p className="text-sm text-slate-500">{t('contact.location')}</p>
                   <p className="font-semibold text-slate-900">Rotterdam, Netherlands</p>
                 </div>
               </div>
@@ -162,7 +163,7 @@ export default function ContactSection() {
 
             {/* Trust indicators */}
             <div className="mt-10 pt-8 border-t border-slate-100">
-              <p className="text-sm text-slate-500 mb-4">Trusted by organizations across Europe</p>
+              <p className="text-sm text-slate-500 mb-4">{t('contact.trust')}</p>
               <div className="flex items-center gap-4">
                 <span className="px-4 py-2 bg-slate-100 rounded-full text-sm text-slate-600">
                   Healthcare
@@ -184,7 +185,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Label htmlFor="name" className="flex items-center gap-2 text-slate-700">
                   <User className="w-4 h-4" />
-                  Full Name <span className="text-red-500">*</span>
+                  {t('contact.form.name')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="name"
@@ -192,7 +193,7 @@ export default function ContactSection() {
                   data-testid="contact-name-input"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your full name"
+                  placeholder={t('contact.form.name')}
                   className="h-12 rounded-xl border-slate-200 bg-white focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
                   required
                 />
@@ -202,7 +203,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Label htmlFor="email" className="flex items-center gap-2 text-slate-700">
                   <Mail className="w-4 h-4" />
-                  Email Address <span className="text-red-500">*</span>
+                  {t('contact.form.email')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="email"
@@ -221,7 +222,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Label htmlFor="phone" className="flex items-center gap-2 text-slate-700">
                   <Phone className="w-4 h-4" />
-                  Phone Number (optional)
+                  {t('contact.form.phone')}
                 </Label>
                 <Input
                   id="phone"
@@ -239,7 +240,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Label htmlFor="company" className="flex items-center gap-2 text-slate-700">
                   <Building2 className="w-4 h-4" />
-                  Company / Organization
+                  {t('contact.form.company')}
                 </Label>
                 <Input
                   id="company"
@@ -247,7 +248,7 @@ export default function ContactSection() {
                   data-testid="contact-company-input"
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="Your organization name"
+                  placeholder={t('contact.form.company')}
                   className="h-12 rounded-xl border-slate-200 bg-white focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
                 />
               </div>
@@ -255,7 +256,7 @@ export default function ContactSection() {
               {/* Company Type */}
               <div className="space-y-2">
                 <Label className="flex items-center gap-2 text-slate-700">
-                  Organization Type <span className="text-red-500">*</span>
+                  {t('contact.form.companyType')} <span className="text-red-500">*</span>
                 </Label>
                 <Select
                   value={formData.company_type}
@@ -266,12 +267,12 @@ export default function ContactSection() {
                     className="h-12 rounded-xl border-slate-200 bg-white focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
                     data-testid="contact-company-type-select"
                   >
-                    <SelectValue placeholder="Select organization type" />
+                    <SelectValue placeholder={t('contact.form.companyTypePlaceholder')} />
                   </SelectTrigger>
                   <SelectContent>
-                    {companyTypes.map((type) => (
-                      <SelectItem key={type.value} value={type.value}>
-                        {type.label}
+                    {companyTypeKeys.map((key) => (
+                      <SelectItem key={key} value={key}>
+                        {t(`contact.companyTypes.${key}`)}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -282,7 +283,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Label htmlFor="message" className="flex items-center gap-2 text-slate-700">
                   <MessageSquare className="w-4 h-4" />
-                  Your Message <span className="text-red-500">*</span>
+                  {t('contact.form.message')} <span className="text-red-500">*</span>
                 </Label>
                 <Textarea
                   id="message"
@@ -290,7 +291,7 @@ export default function ContactSection() {
                   data-testid="contact-message-input"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your needs and how we can help..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                   rows={4}
                   className="rounded-xl border-slate-200 bg-white focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 resize-none"
                   required
@@ -307,21 +308,21 @@ export default function ContactSection() {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 w-5 h-5 animate-spin" />
-                    Sending...
+                    {t('contact.form.sending')}
                   </>
                 ) : (
                   <>
                     <Send className="mr-2 w-5 h-5" />
-                    Send Message
+                    {t('contact.form.submit')}
                   </>
                 )}
               </Button>
 
               {/* Privacy notice */}
               <p className="text-xs text-slate-500 text-center">
-                By submitting this form, you agree to our{" "}
-                <a href="#" className="text-cyan-700 hover:underline">Privacy Policy</a>.
-                We respect your data and will never share it with third parties.
+                {t('contact.form.privacy')}{" "}
+                <a href="#" className="text-cyan-700 hover:underline">{t('contact.form.privacyPolicy')}</a>.
+                {" "}{t('contact.form.privacyNote')}
               </p>
             </form>
           </div>
